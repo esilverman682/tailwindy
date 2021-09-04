@@ -20,12 +20,8 @@ module.exports = {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        
-      //  primary: colors.teal,
-     //   gray: colors.trueGray,
-     primary: colors.blue,
-       gray: colors.lightGray,
-        blue: colors.blue,
+        primary: colors.teal,
+        gray: colors.trueGray,
         code: {
           green: '#b5f4a5',
           yellow: '#ffe484',
@@ -86,7 +82,7 @@ module.exports = {
               paddingBottom: '2px',
               borderRadius: '0.25rem',
             },
-            hr: { borderColor: theme('colors.yellow.200') },
+            hr: { borderColor: theme('colors.gray.200') },
             'ol li:before': {
               fontWeight: '600',
               color: theme('colors.gray.500'),

@@ -14,16 +14,6 @@
     "static/development/_ssgManifest.js"
   ],
   "pages": {
-    "/404": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/404.js"
-    ],
-    "/[product]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/[product].js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -34,15 +24,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/boo": [
+    "/car": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/boo.js"
+      "static/chunks/pages/car.js"
     ],
-    "/lottieScrolls": [
+    "/happyText": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/lottieScrolls.js"
+      "static/chunks/pages/happyText.js"
     ]
   },
   "ampFirstPages": []
