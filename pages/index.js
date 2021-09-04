@@ -4,13 +4,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
-import Form from '/components/form'
-import Cta from '/components/cta'
-import Dropdowns from '/components/dropdowns'
-import Tables from '/components/tables'
-import Avatar from '/components/avatar'
-import HeaderExamples from '/components/headerexamples'
-import Hero from '/components/hero'
+
 const MAX_DISPLAY = 5
 
 export async function getStaticProps() {
@@ -22,37 +16,13 @@ export async function getStaticProps() {
 export default function Home({ posts }) {
   return (
     <>
-
-
-
-    
-    <Hero></Hero>
-    <br />
-
-  <h2 className
-="text-4xl text-green-400 font-extrabold	">  
-  Truth Sets You Free
-  </h2>  
-  <h3 className="text-4xl text-blue-200	 font-extrabold	">  
-  Behold the signof the Son of ManThe Moon and Sun has DarkenedAnd The Stars Are Not Giving off its lightHe ComesIn the throne of His Glory
-
-  </h3>
-  <br />
-
-
-    <HeaderExamples></HeaderExamples><br />
-    <Form></Form>
-    <br />
-    <Cta></Cta> <br />
-    <Dropdowns></Dropdowns> <br />
-    <Tables></Tables> <br />
-      <Avatar></Avatar> <br />
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
-          </h1>
+ 
+            Latest Wils Story
+           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
           </p>
