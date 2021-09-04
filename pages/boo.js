@@ -3,10 +3,11 @@ import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 import { Canvas, extend, useFrame, useLoader, useThree } from 'react-three-fiber';
  import { useCallback, useMemo, useRef } from 'react';
+ import circleImg from './../public/circle.png'
+   
  
  export default function Home() {
- const circleImg = './public/images/circle.png'
-
+ 
 
 extend({OrbitControls})
 

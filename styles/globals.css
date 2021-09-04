@@ -456,3 +456,192 @@ canvas {
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+#container {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+div {
+  font-size: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+body {
+  font-family: avertastd-regular;
+}
+.page-title-1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.75rem;
+  line-height: 74px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+.page-title-2 {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 4.3125rem;
+  line-height: 85px;
+  text-align: center;
+}
+.page-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.25rem;
+  line-height: 44px;
+  text-align: center;
+  margin: 0px;
+  margin-bottom: 40px;
+}
+.page-description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 35px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.intro-card {
+  padding: 100px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+.intro-content {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card {
+  padding: 100px;
+  padding-bottom: 50px;
+}
+
+.lcontent {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 20px;
+  width: 800px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 34px;
+  padding: 20px;
+}
+
+.mobile-collapse {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  height: 500px;
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.howto-content {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 34px;
+  padding: 20px;
+}
+lottie-player {
+  margin-right: auto;
+  margin-left: auto;
+}
+.prettyprint {
+  border: none !important;
+  background: #f6f8fa;
+  padding: 10px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-collapse {
+    display: block;
+  }
+  .container {
+    height: 300px;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .lcontent {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+    width: auto;
+  }
+  .lcard {
+    padding: 10px;
+  }
+  .intro-content {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .intro-card {
+    padding: 10px;
+    padding-bottom: 80px;
+    text-align: center;
+  }
+}
+
+.github {
+  width: 138px;
+  height: 43px;
+  background: #000000;
+  border-radius: 5px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  background-color: #0fccce;
+  border: 0 solid #dae1e7;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.125rem;
+  margin-left: auto;
+  margin-right: auto;
+}
