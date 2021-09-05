@@ -2,7 +2,6 @@
 # yarn lockfile v1
 
 
-<<<<<<< HEAD
 "@babel/code-frame@7.12.11":
   version "7.12.11"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.12.11.tgz#f4ad435aa263db935b8f10f2c552d23fb716a63f"
@@ -6144,6 +6143,11 @@ react-dom@17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
+react-happytext@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-happytext/-/react-happytext-1.0.1.tgz#3ce25b85c397849639eb44cd918b893e221ec821"
+  integrity sha512-I2SnMoAz2n29Qcs+1uH15HEGgmsIV7KcKZz5PVR1XcLad/qHbOt5chhmadzqJglEwmVvwPcPgGRiDkauXOULsg==
+
 react-is@17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
@@ -7815,5 +7819,3 @@ zwitch@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/zwitch/-/zwitch-2.0.2.tgz#91f8d0e901ffa3d66599756dde7f57b17c95dce1"
   integrity sha512-JZxotl7SxAJH0j7dN4pxsTV6ZLXoLdGME+PsjkL/DaBrVryK9kTGq06GfKrwcSOqypP+fdXGoCHE36b99fWVoA==
-=======
->>>>>>> 5a07167d80792f6a26f061412c436990718d3b53
