@@ -12,7 +12,7 @@ const interactivity = {
     {
       visibility: [0,1],
       type: "seek",
-      frames: [0, 60]
+      frames: [0, 200]
     }
   ]  
 };
