@@ -1,11 +1,10 @@
 import  { useRef, useEffect } from "react";
-import {  gsap } from "gsap";
- 
- import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Workout from './workout.svg';
+  
+ import Workout from './workout.svg';
 import Happy from './happy.svg';
 import Greensocklogo from './greensocklogo.svg';
- 
+import { gsap, ScrollTrigger, Draggable, MotionPathPlugin } from "gsap/all";
+
 export default function Sane() {
   gsap.registerPlugin(ScrollTrigger);
 
