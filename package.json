@@ -19,7 +19,7 @@
     "esbuild": "^0.12.15",
     "github-slugger": "^1.3.0",
     "gray-matter": "^4.0.2",
-    "gsap": "./gsap-bonus.tgz",
+    "gsap": "^3.7.1",
     "image-size": "1.0.0",
     "lottie-react": "^2.1.0",
     "mdx-bundler": "^6.0.1",
