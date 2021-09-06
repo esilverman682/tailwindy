@@ -118,7 +118,10 @@ export default function Sane() {
           color: #023047;
           font-size: 60px;
         }
-        
+        svg {
+          width: inherit;
+          height: inherit;
+         }
         .first-paragraph {
           text-align: center;
           color: #023047;
@@ -173,13 +176,13 @@ export default function Sane() {
           </span>
         </p>
         <div className="logo-main">
-          <Workout id="workout-logo"></Workout>
+          <Workout id="workout-logo"    objectFit='contain'layout="fill"></Workout>
         </div>
       </div>
 
       <div className="second">
         <div className="logo-main" >
-          <Greensocklogo id="gsap-logo"></Greensocklogo>      
+          <Greensocklogo id="gsap-logo"  objectFit='contain'  layout="fill"></Greensocklogo>      
         </div>
       </div>
 
@@ -188,7 +191,7 @@ export default function Sane() {
           <span className="line"  />
         </p>
         <div className="logo-main"  >
-          <Happy id="happy-logo" style={{backgroundSize: "100px", width: "100px"}}></Happy>     
+          <Happy id="happy-logo"  objectFit='contain' style={{ width: "inherit", height: "inherit"}}   layout="fill"></Happy>     
         </div>
       </div>
     </div>
