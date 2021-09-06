@@ -9,11 +9,35 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/happyText</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app</loc>
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/lottieInteraction</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/lottieInteractionThree</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/lottieInteractionTwo</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/lottieScroll</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/projects</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/sane</loc>
   </url>
 
   <url>
@@ -73,10 +97,6 @@
   </url>
 
   <url>
-    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/feature</loc>
-  </url>
-
-  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/code</loc>
   </url>
 
@@ -90,6 +110,10 @@
 
   <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/guide</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/feature</loc>
   </url>
 
   <url>
