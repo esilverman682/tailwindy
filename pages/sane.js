@@ -5,6 +5,9 @@ import Happy from './happy.svg';
 import Greensocklogo from './greensocklogo.svg';
 import { gsap, ScrollTrigger, Draggable, MotionPathPlugin } from "gsap/all";
 
+gsap.registerPlugin(ScrollTrigger, Draggable, MotionPathPlugin); 
+
+
 export default function Sane() {
   gsap.registerPlugin(ScrollTrigger);
 
