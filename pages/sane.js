@@ -1,7 +1,7 @@
 import  { useRef, useEffect } from "react";
 import {  gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
+ 
+ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Workout from './workout.svg';
 import Happy from './happy.svg';
 import Greensocklogo from './greensocklogo.svg';
@@ -143,6 +143,7 @@ export default function Sane() {
           height: 300px;
           margin-top: 50px;
           padding-right: 80px;
+      
         }
         
         #happy-logo {
@@ -165,7 +166,7 @@ export default function Sane() {
     />
       <div className="first">
         <h1 className="text-black">ScrollTrigger</h1>
-        <p className="text-black first-paragraph">
+        <p className=" first-paragraph">
           is the coolest Greensock plugin.
           <span role="img" aria-label="celebrating">
             🥳
@@ -187,7 +188,7 @@ export default function Sane() {
           <span className="line"  />
         </p>
         <div className="logo-main"  >
-          <Happy id="happy-logo"></Happy>     
+          <Happy id="happy-logo" style={{backgroundSize: "100px", width: "100px"}}></Happy>     
         </div>
       </div>
     </div>
