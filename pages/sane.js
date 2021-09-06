@@ -2,7 +2,6 @@ import  { useRef, useEffect } from "react";
 import {  gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-import styles from "/App.module.css";
 import Workout from './workout.svg';
 import Happy from './happy.svg';
 import Greensocklogo from './greensocklogo.svg';
