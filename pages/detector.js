@@ -4,7 +4,7 @@ import { TimelineLite, TweenMax, Power3 } from "gsap";
 import Image from "next/image";
 import imgGirl from "./img/girl.webp";
 import imgBoy from "./img/boy.webp";
-import "./styles.scss";
+ 
 
 function App() {
   let app = useRef(null);
@@ -118,12 +118,12 @@ function App() {
             <div ref={el => (images = el)} className="hero-images-inner">
               <div className="hero-image girl">
                 <imgGirl></imgGirl>
-            
+               <Image src={imgGirl} alt="girl" />
               </div>
               
               <div className="hero-image boy">
-              <imgBoy></imgBoy>
-       
+                <imgBoy></imgBoy>
+               <Image src={imgBoy} alt="boy" />
               </div>
             </div>
           </div>
