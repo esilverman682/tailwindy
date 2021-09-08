@@ -249,7 +249,7 @@ export default function Mask() {
             srcSet={require('./girl.webp')}
             type="image/webp"
           />
-          <Image src="/girl/webp" alt=''  width={500}
+          <Image src={imgGirl} alt=''  width={500}
       height={500}/>
         </picture>
 
@@ -260,7 +260,7 @@ export default function Mask() {
             srcSet={require('./boy.webp')}
             type="image/webp"
           />
-          <Image src="/boy/webp" alt=''   width={500}
+          <Image src={imgBoy} alt=''   width={500}
       height={500}/>
         </picture>
 
