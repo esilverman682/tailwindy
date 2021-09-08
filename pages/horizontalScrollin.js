@@ -1,6 +1,6 @@
 import  {  useEffect } from "react";
 import {  gsap } from "gsap";
-
+import Eight from "./pages/800x600.webp"
 
 
 
