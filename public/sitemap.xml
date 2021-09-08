@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/FloatingPoints</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/about</loc>
   </url>
 
@@ -9,7 +13,19 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/detector</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/gsapwordsRise</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/happyText</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/horizontalScrollin</loc>
   </url>
 
   <url>
@@ -30,6 +46,10 @@
 
   <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/lottieScroll</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/mask</loc>
   </url>
 
   <url>
@@ -97,6 +117,10 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/feature</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/code</loc>
   </url>
 
@@ -110,10 +134,6 @@
 
   <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/guide</loc>
-  </url>
-
-  <url>
-    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/feature</loc>
   </url>
 
   <url>
