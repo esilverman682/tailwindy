@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from "react";
  
 import {TimeLine, TweenMax,  Power3 } from "gsap";
  
-//import imgGirl from "./girl.webp";
-//import imgBoy from "./boy.webp";
+ import imgGirl  from './workout.svg';
+ import imgBoy  from './workout.svg';
 import  "@/components/styles.module.scss"
 import gsap from "gsap";
 import Image from 'next/image'
@@ -243,19 +243,15 @@ export default function Mask() {
           <div className="hero-images">
             <div ref={el => (images = el)} className="hero-images-inner">
               <div className="hero-image girl">
-{/*
-         <picture style={{ objectFit: 'cover' }}>
-          <source
-            srcSet={require('./girl.webp')}
-            type="image/webp"
-          />
-          <Image src={imgGirl} alt=''  width={500}
-      height={500}/>
-        </picture>
+ 
+ 
+ 
+ 
+
+        <imgGirl id="workout-logo"    objectfit='contain'layout="fill"></imgGirl>
 
 
-
-*/}
+ 
 
 
                    </div>
@@ -264,19 +260,12 @@ export default function Mask() {
 
 <div className="hero-image boy">
 
-{/*
+ 
 
-<picture style={{ objectFit: 'cover' }}>
-<source
-srcSet={require('./boy.webp')}
-type="image/webp"
-/>
-<Image src={imgBoy} alt=''   width={500}
-height={500}/>
-</picture>
+<imgBoy id="workout-logo"    objectfit='contain'layout="fill"></imgBoy>
 
 
-*/ }    
+   
 
                </div>
             </div>
