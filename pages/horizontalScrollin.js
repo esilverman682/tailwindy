@@ -2,73 +2,59 @@ import  {  useEffect } from "react";
 import {  gsap } from "gsap";
  import { throttle } from "lodash"; 
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
- 
- 
+ import Image from "next/image";
+ import imagez from "./800x600.webp"
+
 export default function Mask() {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    const hero = document.querySelector("[data-hero]");
-  
-
-  /* Menu */
-  const menuButton = document.querySelector('[data-btn="menu"]');
-  const menu = document.querySelector("[data-menu]");
-  
-  menuButton.addEventListener("click", () => {
-    menu.classList.toggle("is-open");
-    menuButton.classList.toggle("is-active");
-  });
-  
-  /* Cursor */
-  const onMouseMove = (e) => {
-    const { clientX, clientY } = e;
-    const x = Math.round((clientX / window.innerWidth) * 100);
-    const y = Math.round((clientY / window.innerHeight) * 100);
-  
-    gsap.to(hero, {
-      "--x": `${x}%`,
-      "--y": `${y}%`,
-      duration: 0.3,
-      ease: "sine.out",
-    });
-  };
-  
-   /* Text animation */
  
-
-  
-  // Set initial text styles (before animation)
-  gsap.set(".hero--primary .char", {
-    opacity: 0,
-    y: 25,
-  });
-  
-  /* Timeline */
-  const tl = gsap.timeline({ delay: 1 });
-  
-  tl.to(".hero--primary .char", {
-    opacity: 1,
-    y: 0,
-    duration: 0.75,
-    stagger: 0.1,
-  })
-    .to(hero, {
-      "--maskSize1": "20%",
-      duration: 0.5,
-      ease: "back.out(2)",
-    })
-    .to(hero, {
-      "--maskSize2": "28%",
-      "--maskSize3": "calc(28% + 0.1rem)",
-      duration: 0.5,
-      delay: 0.3,
-      ease: "back.out(2)",
-    })
-    .then(() => {
-      window.addEventListener("mousemove", throttle(onMouseMove, 30));
+    // CREDIT TO JACK @ GREENSOCK
+    gsap.registerPlugin(ScrollTrigger);
     
+    let container = document.querySelector(".portfolio");
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        pin: true,
+        scrub: 1,
+        trigger: container,
+        end: () => container.scrollWidth - document.documentElement.clientWidth + container.offsetWidth
+      },
+      invalidateOnRefresh: true,
+      defaults: { ease: "none", duration: 1 }
     });
+    
+    tl.to(".parallax", { x: 300 })
+      .to(".panel", {
+          x: () => -(container.scrollWidth - document.documentElement.clientWidth)
+        },
+        0
+      )
+      .from(".secondAn", {
+          opacity: 0,
+          scale: 0.25,
+          duration: 0.2,
+          stagger: {
+            amount: 0.8
+          }
+        },
+        0
+      );
+    
+    gsap.from(".firstAn", {
+      duration: 1,
+      opacity: 0,
+      scale: 0.25,
+      scrollTrigger: {
+        trigger: container,
+        start: "top 90%",
+        end: "bottom 10%",
+        toggleActions: "play none none reverse"
+      }
+    });
+    
+   
   }, []);
   
  
@@ -488,64 +474,69 @@ a:focus-visible {
       }}
     />
  
-      <div className="demo-1">
-    <main>
-      <div className="frame">
-        <div className="frame__title-wrap">
-          <h1 className="frame__title">Hero Mask Animation</h1>
-          <nav className="frame__links">
-            <a href="http://tympanus.net/Development/3DLettersMenuHover/">Previous demo</a>
-            <a href="https://tympanus.net/codrops/?p=54377">Article</a>
-            <a href="https://github.com/mbarker84/codrops-masked-hero">GitHub</a>
-          </nav>
-        </div>
-      </div>
-      <div className="content">
-       
-        <header>
-          <button className="menu-button" data-btn="menu" aria-label="menu">
-            <span className="menu-button__icon">
-              <span></span>
-            </span>
-          </button>
-          <nav className="menu" data-menu>
-            <ul>
-              <li>
-                <a href="">About me</a>
-              </li>
-              <li>
-                <a href="">Projects</a>
-              </li>
-              <li>
-                <a href="">Writing</a>
-              </li>
-            </ul>
-          </nav>
-        </header>
+ HTML CSS JSResult Skip Results Iframe
+EDIT ON
+<div className="spacer-lg">
+  <h1>LARGE SPACER</h1>
+    <h2>Scroll Down</h2>
+</div>
 
-        <div className="wrapper">
-          <div className="hero hero--primary">
-            <div className="container">
-              <h1 className="hero__heading" data-splitting>
-                Welcome To The Media <br />Center
-              </h1>
-            </div>
-          </div>
-
-          <div className="hero hero--secondary" aria-hidden="true" data-hero>
-            <div className="container">
-              <p className="hero__heading" data-splitting>
-              Welcome To The Media <br />Center
-
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-
+<section className="section portfolio">
+  <h2 className="portfolio_title parallax">Portfolio</h2>
+  <div className="panel">
+    <div className="panel_item">
+      <iImage alt="" g className="panel_img firstAn" src="https://via.placeholder.com/800x600.jpg" />
+    </div>
   </div>
+
+  <div className="panel">
+    <div className="panel_item">
+      <Image alt="" className="panel_img firstAn" src="https://via.placeholder.com/800x600.jpg" />
+    </div>
+  </div>
+
+  <div className="panel">
+    <div className="panel_item">
+      <Image alt="" className="panel_img secondAn" src="https://via.placeholder.com/800x600.jpg" />
+    </div>
+  </div>
+
+  <div className="panel">
+    <div className="panel_item">
+      <Image alt="" className="panel_img secondAn" src="https://via.placeholder.com/800x600.jpg" />
+    </div>
+  </div>
+
+  <div className="panel">
+    <div className="panel_item">
+      <Image alt="" className="panel_img secondAn" src="/800x600.jpg" />
+    </div>
+  </div>
+
+  <div className="panel">
+    <div className="panel_item">
+      <Image alt="" className="panel_img secondAn" src="/800x600.jpg" />
+    </div>
+  </div>
+
+  <div className="panel">
+    <div className="panel_item">
+      <Image className="panel_img secondAn" src="/800x600.jpg" alt="" />
+    </div>
+  </div>
+
+  <div className="panel">
+    <div className="panel_item">
+      <Image className="panel_img secondAn" src="https://via.placeholder.com/800x600.jpg" alt="" />
+    </div>
+  </div>
+</section>
+
+<div className="spacer margin">
+  <h1>The End</h1>
+</div>
+
+Resources1× 0.5× 0.25×Rerun
     </div>
   );
 }
