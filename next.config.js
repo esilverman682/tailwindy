@@ -3,7 +3,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 module.exports = {
   images: {
-    domains: ['assets.example.com'],
+    domains: ['assets.localhost:3000'],
+    disableStaticImages: true
   },
 }
 module.exports = withBundleAnalyzer({
