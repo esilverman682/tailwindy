@@ -67,32 +67,78 @@ export default function Mask() {
     
     <div className=" " >
        
-<div className="spacer-lg">
-  <h1>LARGE SPACER</h1>
-    <h2>Scroll Down</h2>
+       <div className="spacer">
+  <h1>Scroll Down</h1>
+</div>
+
+<section className="section portfolio">
+   <h2 className="portfolio_title text-stroke parallax">Portfolio</h2>
+      <div className="panel">
+        <div className="panel_item">
+        <Image className="panel_img firstAn" src={require('/assets/800x600.webp')} alt="image" />
+        </div>
+      </div>
+
+      <div className="panel">
+        <div className="panel_item">
+        <Image className="panel_img firstAn" src={require('/assets/800x600.webp')} alt="image" />
+        </div>
+      </div>
+  
+      <div className="panel">
+        <div className="panel_item">
+        <Image className="panel_img secondAn"   src={require('/assets/800x600.webp')} alt="image" />
+        </div>
+      </div>
+
+      <div className="panel">
+        <div className="panel_item">
+        <Image className="panel_img secondAn"   src={require('/assets/800x600.webp')} alt="image" />
+        </div>
+      </div>
+
+      <div className="panel">
+        <div className="panel_item">
+        <Image className="panel_img secondAn"   src={require('/assets/800x600.webp')} alt="image" />
+        </div>
+      </div>
+
+      <div className="panel">
+        <div className="panel_item">
+        <Image className="panel_img secondAn"   src={require('/assets/800x600.webp')} alt="image" />
+        </div>
+      </div>
+
+      <div className="panel">
+        <div className="panel_item">
+        <Image className="panel_img secondAn"   src={require('/assets/800x600.webp')} alt="image" />
+        </div>
+      </div>
+
+      <div className="panel">
+        <div className="panel_item">
+        <Image className="panel_img secondAn"   src={require('/assets/800x600.webp')} alt="image" />
+        </div>
+      </div>
+</section>
+
+<div className="spacer">
+  <h1>The End</h1>
 </div>
           <style
       dangerouslySetInnerHTML={{
           __html: `
-          HTML CSS JSResult Skip Results Iframe
-          EDIT ON
-          @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
-          *,
-          *:before,
-          *:after {
+          @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+          *, *:before, *:after {
             box-sizing: border-box;
             position: relative;
-            letter-spacing: 0px;
+            letter-spacing: 0.04em;
           }
-          body {
-            font-family: "Montserrat", sans-serif;
-            background-color: #fefefe;
+          body { 
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FEFEFE;
             overflow-x: hidden;
-          }
-          .spacer-lg {
-            height: 100vh;
-            margin: 0;
-            width: 100%;
           }
           .spacer {
             height: 100vh;
@@ -100,8 +146,7 @@ export default function Mask() {
             align-items: center;
             justify-content: center;
           }
-          h1, h2 {
-            text-align: center;
+          h1 {
             font-size: 3rem;
             color: #000;
           }
@@ -117,17 +162,31 @@ export default function Mask() {
             height: 100vh;
             display: flex;
             flex-wrap: nowrap;
-            background-color: #1f242d;
+            background-color: #1F242D;
             overflow: hidden;
           }
           .portfolio_title {
             position: absolute;
             top: 0;
-        //    left: -12rem;
-        left: -12rem;
-        font-size: 24rem;
+            left: -15rem;
+            font-size: 24rem;
+            letter-spacing: 0;
+            -webkit-text-stroke-color: #343A42;
+            display: inline-block;
           }
-          
+          .text-stroke {
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #343A42;
+          }
+          .grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            aling-content: center;
+            justify-content: center;
+            overflow: hidden;
+          }
           .panel {
             display: flex;
             flex: 0 0 50%;
@@ -135,12 +194,10 @@ export default function Mask() {
             align-items: center;
             align-content: center;
             justify-content: center;
-            height: 80%;
-            margin-top: auto;
+            height: 100%;
             padding: 10rem 7rem 2rem 7rem;
             background-color: transparent;
             overflow: hidden;
-            z-index: 2;
           }
           .panel_item {
             height: 100%;
@@ -152,73 +209,11 @@ export default function Mask() {
             height: 100%;
             margin: 0 auto;
           }
-          
-  
+ 
 
                    `
       }}
     />
- 
- 
-
-
-<section className="section portfolio">
-  <h2 className="portfolio_title parallax">Portfolio</h2>
-  <div className="panel">
-    <div className="panel_item">
-    <Image className="panel_img secondAn"  src={require('/assets/800x600.webp')} alt="image" />
-
-    </div>
-  </div>
-
-  <div className="panel">
-    <div className="panel_item">
-    <Image className="panel_img secondAn" src={require('/assets/800x600.webp')} alt="image" />
- </div>
-  </div>
-
-  <div className="panel">
-    <div className="panel_item">
-    <Image className="panel_img secondAn"   src={require('/assets/800x600.webp')} alt="image" />
-  </div>
-  </div>
-
-  <div className="panel">
-    <div className="panel_item">
-    <Image className="panel_img secondAn"  src={require('/assets/800x600.webp')} alt="image" />
- </div>
-  </div>
-
-  <div className="panel">
-    <div className="panel_item">
-    <Image className="panel_img secondAn"  src={require('/assets/800x600.webp')} alt="image" />
- </div>
-  </div>
-
-  <div className="panel">
-    <div className="panel_item">
-    <Image className="panel_img secondAn"  src={require('/assets/800x600.webp')} alt="image" />
- </div>
-  </div>
-
-  <div className="panel">
-    <div className="panel_item">
-    <Image className="panel_img secondAn"  src={require('/assets/800x600.webp')} alt="image" />
- </div>
-  </div>
-
-  <div className="panel">
-    <div className="panel_item">
-    <Image className="panel_img secondAn"  src={require('/assets/800x600.webp')} alt="image" />
-  </div>
-  </div>
-</section>
-
-<div className="spacer margin">
-  <h1>The End</h1>
-</div>
-
- 
     </div>
   );
 }
