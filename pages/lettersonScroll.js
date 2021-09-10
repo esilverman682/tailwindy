@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
@@ -80,7 +81,7 @@ export default function PrimaryAnimatedLayout() {
                 height="874"
                 src="https://source.unsplash.com/random/1240x874?sig=71"
                 width="1240" alt=""
-                alt=""
+               
                 />
             </li>
             <li>
