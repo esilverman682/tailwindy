@@ -1,8 +1,14 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
-
+module.exports = {
+  images: {
+    domains: ['assets.localhost:3000'],
+    disableStaticImages: true
+  },
+}
 module.exports = withBundleAnalyzer({
+  
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   eslint: {
