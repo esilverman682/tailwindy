@@ -1,16 +1,18 @@
 import  {useEffect } from "react";
 import {gsap } from "gsap";
-import {Power4} from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-export default function Mask() {
+ import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
+//import HappyText from "./happyText";
 
-  gsap.registerPlugin(ScrollTrigger);
+export default function Mask() {
+ 
+  gsap.registerPlugin(ScrollToPlugin)
+ gsap.registerPlugin(ScrollTrigger);
 
 
   useEffect(() => {
-
-
+    
     var select = document.querySelector.bind(document);
 
     // This function will return a node-list of elements
@@ -31,17 +33,27 @@ export default function Mask() {
         .fromTo('.mountBg', {y:-10},{y:-100}, 0)
         .fromTo('.mountMg', {y:-30},{y:-250}, 0)
         .fromTo('.mountFg', {y:-50},{y:-600}, 0)
-    
-        banner.addEventListener("mouseenter", function() { gsap.to('.arrow', {y:10, duration:0.8, ease:'back.inOut(3)', overwrite:'auto'}); })
-        banner.addEventListener("mouseleave", function() {  gsap.to('.arrow', {y:0, duration:0.5, ease:'power3.out', overwrite:'auto'}); })
-        banner.addEventListener("click", function() {   gsap.to(window, {scrollTo:innerHeight, duration:1.5, ease:'power1.inOut'}); }) // scrollTo requires the ScrollTo plugin (not to be confused w/ ScrollTrigger)
-    
-    
+       // Use our elements with an Event Listener OrIGNAL CODE https://codepen.io/creativeocean/pen/qBbBLyB
+       // $('#arrowBtn').on('mouseenter', (e)=>{  REPLACED BY    banner.addEventListener("mouseenter", function() { 
+      banner.addEventListener("mouseenter", function() { 
+        gsap.to('.arrow', {y:10, duration:0.8, ease:'back.inOut(4)', overwrite:'auto'}); })
+
+      banner.addEventListener("mouseleave", function() {  
+        gsap.to('.arrow', {y:0, duration:0.5, ease:'power4.out', overwrite:'auto'}); })
+      banner.addEventListener("click", function() {   
+        gsap.to(window, {scrollTo:innerHeight, duration:1.5, ease:'power1.inOut'}); }) // scrollTo requires the ScrollTo plugin (not to be confused w/ ScrollTrigger)
+ 
+   //     gsap.to(window, {
+     //     duration: 2, 
+       //   scrollTo:{y: 300, autoKill: true, onAutoKill: myAutoKillFunction}});
+
+ //       function myAutoKillFunction() {
+   //      alert("autoKill");
+     //   }
   }, []); 
 
   return (
-    <div className=" " >
- 
+    <div>
 <div className="scrollDist"></div>
 <div className="main">
   <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
@@ -52,15 +64,26 @@ export default function Mask() {
       </g>
     </mask>
     
-    <image className="sky" xlinkHref="https://assets.codepen.io/721952/sky.jpg"  width="1200" height="590" />
-    <image className="mountBg" xlinkHref="https://assets.codepen.io/721952/mountBg.png" width="1200" height="800"/>    
-    <image className="mountMg" xlinkHref="https://assets.codepen.io/721952/mountMg.png" width="1200" height="800"/>    
-    <image className="cloud2" xlinkHref="https://assets.codepen.io/721952/cloud2.png" width="1200" height="800"/>    
-    <image className="mountFg" xlinkHref="https://assets.codepen.io/721952/mountFg.png" width="1200" height="800"/>
-    <image className="cloud1" xlinkHref="https://assets.codepen.io/721952/cloud1.png" width="1200" height="800"/>
-    <image className="cloud3" xlinkHref="https://assets.codepen.io/721952/cloud3.png" width="1200" height="800"/>
+    <image  alt="" className="sky" 
+    xlinkHref="https://assets.codepen.io/721952/sky.jpg"  width="1200" height="590" />
+    <image  alt="" className="mountBg" 
+    xlinkHref="https://assets.codepen.io/721952/mountBg.png" width="1200" height="800"/>    
+    <image  alt="" className="mountMg"  
+    xlinkHref="https://assets.codepen.io/721952/mountMg.png" width="1200" height="800"/>    
+    <image  alt="" className="cloud2" 
+    xlinkHref="https://assets.codepen.io/721952/cloud2.png" width="1200" height="800"/>    
+    <image alt=""  className="mountFg" 
+    xlinkHref="https://assets.codepen.io/721952/mountFg.png" width="1200" height="800"/>
+    <image  alt="" className="cloud1" 
+    xlinkHref="https://assets.codepen.io/721952/cloud1.png" width="1200" height="800"/>
+    <image  alt="" className="cloud3" 
+    xlinkHref="https://assets.codepen.io/721952/cloud3.png" width="1200" height="800"/>
+    
     <text fill="#fff" x="350" y="200">EXPLORE</text>
-    <polyline className="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
+
+    <polyline className="arrow" 
+    fill="#fff" 
+    points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
     
     <g mask="url(#m)">
       <rect fill="#fff" width="100%" height="100%" />      
@@ -68,7 +91,9 @@ export default function Mask() {
     </g>
     
     <rect id="arrowBtn" width="100" height="100" opacity="0" x="550" y="220" 
-    style={{cursor:"pointer"}}/>
+      style={{
+        cursor:"pointer"
+      }}/>
   </svg>
 </div>
 
@@ -76,17 +101,20 @@ export default function Mask() {
       dangerouslySetInnerHTML={{
           __html: `
           @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
-
-          body, html {
-            width:100%;
-            height:100%;
+ 
+         html, body {
+           
+           
+          }
+          .main {
             background:#ddd;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Lato', sans-serif;
             font-size:99px;
             text-align:center;
+            height:100%; width:100%;
           }
-          
-          div {
+
+          div.main, div.scrollDist {
             position:absolute;
           }
           
@@ -94,6 +122,11 @@ export default function Mask() {
                    `
       }}
     />
+
+
+
+
+    
     </div>
   );
 }
