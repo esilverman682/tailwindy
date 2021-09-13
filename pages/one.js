@@ -39,7 +39,6 @@ export default function Some() {
 
   return (
 <>
- 
     <div className="container">
       <div className="img_container"> 
         <div className="mask">
@@ -76,13 +75,13 @@ export default function Some() {
       </div>
       <div className="img_container">
         <div className="mask">
-          <img 
-            className="greensock-icon"
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=76"
-            width="1240"
-            alt=""
-          />
+        <img 
+             className="greensock-icon"
+             height="874"
+             src="https://source.unsplash.com/random/1240x874?sig=76"
+             width="1240"
+             alt=""
+             />
         </div>
       </div>
 
