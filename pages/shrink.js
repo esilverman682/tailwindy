@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-{/*Reference https://codepen.io/hexagoncircle/pen/LYpaPQp */}
+{/*Reference https://codepen.io/GreenSock/pen/wvKwZXG */}
  export default function Some() {
  
   useEffect(() => {
@@ -86,7 +86,18 @@ Some additional content
 
 
 
- 
+
+<header>
+   <a href="https://greensock.com/scrolltrigger">
+   <img 
+             className="greensock-icon"
+             height="874"
+             src="https://source.unsplash.com/random/1240x874?sig=76"
+             width="1240"
+             alt=""
+             />
+  </a> 
+</header>
  
      <style
       dangerouslySetInnerHTML={{
