@@ -2,7 +2,7 @@ import React  from "react";
 import { gsap, Power2 } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import  { useEffect } from "react"; 
-
+{{ /* BEST IMAGE REVEAL REFERENCE : https://www.youtube.com/watch?v=qlx3j0Jm9rY   */}}
 export default function Some() {
  
   useEffect(() => {
@@ -75,7 +75,7 @@ export default function Some() {
       </div>
       <div className="img_container">
         <div className="mask">
-        <img 
+   <img 
              className="greensock-icon"
              height="874"
              src="https://source.unsplash.com/random/1240x874?sig=76"
