@@ -1,13 +1,13 @@
 import gsap from "gsap";
 import React, { useRef } from "react";
 import color from "nice-color-palettes";
+ 
 
-const Text = ({ children }) => {
-  const textArray = Array.from(children);
-
+const Text = ( {children}  ) => {
+  const textArray = Array.from(
+    'He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty. I will say of the LORD, He is my refuge and my fortress: my God; in him will I trust. Surely he shall deliver thee from the snare of the fowler, and from the noisome pestilence.');
   const ref = useRef();
   const palette = color[Math.floor(gsap.utils.random(1, 100))];
-
   const colorize = (index) => {
     const randColor = Math.floor(gsap.utils.random(0, 4));
     if (!gsap.isTweening(ref.current.children[index])) {

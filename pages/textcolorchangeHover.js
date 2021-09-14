@@ -7,6 +7,7 @@ import Text from "./Text";
  export default function Some() {
  
   useEffect(() => {
+    
 }, []);
 
   return (
