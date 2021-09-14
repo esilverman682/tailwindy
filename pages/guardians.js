@@ -3,7 +3,7 @@ import React  from "react";
 import { gsap, Power2 } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import  { useEffect } from "react"; 
-{{ /* BEST IMAGE REVEAL REFERENCE : https://www.youtube.com/watch?v=qlx3j0Jm9rY   */}}
+{{ /* NEXT BEST IMAGE REVEAL REFERENCE : https://codepen.io/GreenSock/pen/oNjgEjm  */}}
 export default function Some() {
  
   useEffect(() => {
