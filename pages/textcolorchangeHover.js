@@ -2,14 +2,12 @@
 import { useEffect } from 'react';
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Text from "./Text";
+
 {/*Reference https://codepen.io/GreenSock/pen/JjYPgdp */}
  export default function Some() {
  
   useEffect(() => {
-    
-    
 }, []);
-
 
   return (
     <>
@@ -80,7 +78,7 @@ import Text from "./Text";
           justify-content: start;
         }
         .nav a {
-          color: darkgrey;
+          color: #7b7777;
           text-decoration: none;
           text-transform: uppercase;
           font-size: 1rem;

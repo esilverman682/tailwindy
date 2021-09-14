@@ -22,7 +22,7 @@ const Text = ({ children }) => {
     gsap.to(ref.current.children[index], {
       duration: 1,
       delay: 0.5,
-      color: "black"
+      color: "#7b7777"
     });
   };
   return (
