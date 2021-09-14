@@ -7,7 +7,7 @@ import Scrollbar from 'smooth-scrollbar';
 //import ScrollToPlugin from "gsap/ScrollToPlugin";
  import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
 
-{{ /* BEST IMAGE REVEAL REFERENCE : https://www.youtube.com/watch?v=qlx3j0Jm9rY   */}}
+{{ /*   REFERENCE : https://codepen.io/akapowl/pen/6a2480c123d88dc391faba0ea5cc590f  */}}
 export default function Some() {
 
  // const plugins = [ScrollToPlugin];
