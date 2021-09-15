@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-{/*Reference https://codepen.io/GreenSock/pen/JjYPgdp */}
+{/*Reference https://codepen.io/GreenSock/pen/eYpGLYL */}
  export default function Some() {
  
   useEffect(() => {
