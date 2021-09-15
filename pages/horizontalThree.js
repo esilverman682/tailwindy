@@ -38,7 +38,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
   
 <div className="massiveImage"></div>
 
-<h1 className="header-section">Now we're back to regular scrolling</h1>
+<h1 className="header-section">Now were back to regular scrolling</h1>
 
 
 

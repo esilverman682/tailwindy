@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
  import gsap from 'gsap'
 import { useEffect } from 'react';
 import ScrollTrigger from "gsap/dist/ScrollTrigger";

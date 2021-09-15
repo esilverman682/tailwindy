@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React  from "react";
 import { gsap, Power2 } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";

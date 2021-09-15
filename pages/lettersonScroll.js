@@ -173,6 +173,7 @@ export default function PrimaryAnimatedLayout() {
                 height="874"
                 src="https://source.unsplash.com/random/1240x874?sig=80"
                 width="1240"
+                alt=""
               />
             </li>
             <li>

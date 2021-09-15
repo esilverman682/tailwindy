@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
  import gsap from 'gsap'
 import { useEffect } from 'react';
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -32,16 +33,16 @@ gsap.set(".skewElem", {transformOrigin: "right center", force3D: true});
   return (
     <>
 <div> 
-<img width="600" height="600" src="https://picsum.photos/600/600?random=1" alt="" class="skewElem" />
-<img width="600" height="600" src="https://picsum.photos/600/600?random=2" alt="" class="skewElem" />
-<img width="600" height="600" src="https://picsum.photos/600/600?random=3" alt="" class="skewElem" />
-<img width="600" height="600" src="https://picsum.photos/600/600?random=4" alt="" class="skewElem" />
-<img width="600" height="600" src="https://picsum.photos/600/600?random=5" alt="" class="skewElem" />
-<img width="600" height="600" src="https://picsum.photos/600/600?random=6" alt="" class="skewElem" />
-<img width="600" height="600" src="https://picsum.photos/600/600?random=7" alt="" class="skewElem" />
-<img width="600" height="600" src="https://picsum.photos/600/600?random=8" alt="" class="skewElem" />
-<img width="600" height="600" src="https://picsum.photos/600/600?random=9" alt="" class="skewElem" />
-<img width="600" height="600" src="https://picsum.photos/600/600?random=10" alt="" class="skewElem" />
+<img width="600" height="600" src="https://picsum.photos/600/600?random=1" alt="" className="skewElem" />
+<img width="600" height="600" src="https://picsum.photos/600/600?random=2" alt="" className="skewElem" />
+<img width="600" height="600" src="https://picsum.photos/600/600?random=3" alt="" className="skewElem" />
+<img width="600" height="600" src="https://picsum.photos/600/600?random=4" alt="" className="skewElem" />
+<img width="600" height="600" src="https://picsum.photos/600/600?random=5" alt="" className="skewElem" />
+<img width="600" height="600" src="https://picsum.photos/600/600?random=6" alt="" className="skewElem" />
+<img width="600" height="600" src="https://picsum.photos/600/600?random=7" alt="" className="skewElem" />
+<img width="600" height="600" src="https://picsum.photos/600/600?random=8" alt="" className="skewElem" />
+<img width="600" height="600" src="https://picsum.photos/600/600?random=9" alt="" className="skewElem" />
+<img width="600" height="600" src="https://picsum.photos/600/600?random=10" alt="" className="skewElem" />
 
 
  
