@@ -2,6 +2,7 @@
 import gsap from "gsap";
 import { useEffect } from "react";
 
+{{/*REFERENCE: https://greensock.com/forums/topic/24887-gsap-2x-clamp-carousel-example/*/ }}
 export default function Some() {
   useEffect(() => {
      var colors = ["#f38630","#6fb936", "#ccc", "#6fb936"];

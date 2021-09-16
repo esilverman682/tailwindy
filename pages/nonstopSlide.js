@@ -123,8 +123,8 @@ export default function Some() {
 
   return (
 <>
-<div class="gallery">
-  <ul class="cards">
+<div className="gallery">
+  <ul className="cards">
     <li>0</li>
     <li>1</li>
     <li>2</li>
@@ -157,9 +157,9 @@ export default function Some() {
     <li>29</li>
     <li>30</li>
   </ul>
-  <div class="actions">
-    <button class="prev">Prev</button>
-    <button class="next">Next</button>
+  <div className="actions">
+    <button className="prev">Prev</button>
+    <button className="next">Next</button>
   </div>
 </div>
 
@@ -168,114 +168,77 @@ export default function Some() {
     dangerouslySetInnerHTML={{
         __html: `
 
-        HTML CSS JSResult Skip Results Iframe
-        EDIT ON
-        * {
-          box-sizing: border-box;
-        }
-        body {
-          background: #111;
-          min-height: 100vh;
-          padding: 0;
-          margin: 0;
-        }
-        .gallery {
-          position: absolute;
-          width: 100%;
-          height: 100vh;
-          overflow: hidden;
-        }
-        
-        .cards {
-          position: absolute;
-          width: 14rem;
-          height: 18rem;
-          top: 40%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-        
-        .cards li {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          width: 14rem;
-          height: 18rem;
-          text-align: center;
-          line-height: 18rem;
-          font-size: 2rem;
-          font-family: sans-serif;
-          background-color: #9d7cce;
-          position: absolute;
-          top: 0;
-          left: 0;
-          border-radius: 0.8rem;
-        }
-        
-        .actions {
-          position: absolute;
-          bottom: 25px;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        
-        button {
-          display:inline-block;
-          outline: none;
-          border: none;
-          padding: 8px 14px;
-          background: #414141;
-          background-image: -webkit-linear-gradient(top, #575757, #414141);
-          background-image: -moz-linear-gradient(top, #575757, #414141);
-          background-image: -ms-linear-gradient(top, #575757, #414141);
-          background-image: -o-linear-gradient(top, #575757, #414141);
-          background-image: linear-gradient(to bottom, #575757, #414141);
-          text-shadow: 0px 1px 0px #414141;
-          -webkit-box-shadow: 0px 1px 0px 414141;
-          -moz-box-shadow: 0px 1px 0px 414141;
-          box-shadow: 0px 1px 0px 414141;
-          color: #ffffff;
-          text-decoration: none;
-          margin: 0 auto 10px;
-          -webkit-border-radius: 4;
-          -moz-border-radius: 4;
-          border-radius: 4px;
-          padding: 12px 25px;
-          font-family: "Signika Negative", sans-serif;
-          text-transform: uppercase;
-          font-weight: 600;
-          cursor: pointer;
-          font-size: 13px;
-          line-height: 18px;
-        }
-        
-        button:hover {
-          background: #57a818;
-          background-image: -webkit-linear-gradient(top, #57a818, #4d9916);
-          background-image: -moz-linear-gradient(top, #57a818, #4d9916);
-          background-image: -ms-linear-gradient(top, #57a818, #4d9916);
-          background-image: -o-linear-gradient(top, #57a818, #4d9916);
-          background-image: linear-gradient(to bottom, #57a818, #4d9916);
-          text-shadow: 0px 1px 0px #32610e;
-          -webkit-box-shadow: 0px 1px 0px fefefe;
-          -moz-box-shadow: 0px 1px 0px fefefe;
-          box-shadow: 0px 1px 0px fefefe;
-          color: #ffffff;
-          text-decoration: none;
-        }
-        
-        button {
-          font-size: 20px;
-          font-weight: 400;
-        }
-        
-        a {
-          color: #88ce02;
-          text-decoration: none;
-        }
-        a:hover {
-          text-decoration: underline;
-        }
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+
+body, html
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-family: 'Lora', serif;
+	color: #303030;
+}
+
+.night-label{
+	opacity: 0.2;
+}
+
+body
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #FEF9EA;
+}
+
+.layout
+{
+	width: 70vw;
+	max-width: 300px;
+	min-width: 250px;
+	height: 30vh;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	font-size: 25px;
+}
+
+.layout:nth-child(1)
+{
+	text-align: right;
+}
+
+svg
+{	
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+#night-content
+{
+	opacity: 0.5;
+}
+
+.inner-shadow
+{
+	stroke-opacity: 0.1;
+	stroke-width: 5;
+	stroke: black;
+	fill: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
  
     `
     }}
