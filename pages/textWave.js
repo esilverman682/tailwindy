@@ -8,7 +8,7 @@ import SplitTextToChars from "./SplitTextToChars";
  import styled from "styled-components";
  
 const TextStyled = styled.p`
-  font-size: calc(32px + (64 - 32) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(62px + (104 - 32) * ((150vw - 320px) / (1600 - 320)));
   font-family: poppins;
   font-weight: 500;
   margin: 0;
@@ -52,7 +52,7 @@ export default function App() {
           font-family: sans-serif;
           text-align: center;
           background-color: #7700ff;
-        
+          font-size: 45px;
           position: relative;
         
           width: 100%;
