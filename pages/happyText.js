@@ -9,11 +9,12 @@
     style={{
       fontSize :"78px",
       fontWeight: 'bolder',
-      lineHeight: "10px;"
+      lineHeight: "10px;",
+      color: "yellow"
 
     }}> 
 
- <Happy value="Kapitus Difference" />
+ <Happy value="Make A Difference" />
 
     </span>
 </>
