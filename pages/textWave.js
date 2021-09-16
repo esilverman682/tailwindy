@@ -2,11 +2,11 @@
 //https://webanimation.blog/blog/wavy-text-animation-using-react-hooks-with-gsap-v3/
 import React, { useEffect, useRef } from "react";
 
- //import styled from "@emotion/memoize/dist/emotion-memoize.cjs"
+// import styled from "@emotion/memoize/dist/emotion-memoize.cjs"
 import gsap from "gsap";
 import SplitTextToChars from "./SplitTextToChars";
-import styled from "styled-components";
-//
+ import styled from "styled-components";
+ 
 const TextStyled = styled.p`
   font-size: calc(32px + (64 - 32) * ((100vw - 320px) / (1600 - 320)));
   font-family: poppins;
