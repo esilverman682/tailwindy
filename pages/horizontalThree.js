@@ -8,8 +8,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.registerPlugin(ScrollTrigger);
-
+ 
     gsap.set(".massiveImage", {backgroundImage: `url(https://source.unsplash.com/random/${innerWidth * 3}x${innerHeight})`})
     
     gsap.to(".massiveImage", {

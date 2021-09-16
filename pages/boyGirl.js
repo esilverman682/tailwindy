@@ -3,6 +3,8 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import "@/components/stylee.module.scss";
 
+
+{{/* Reference: https://codesandbox.io/s/gsap-hero-animation-p70nt?file=/src/styles.scss:0-2941 */}}
 export default function App() {
   let app = useRef(null);
   let images = useRef(null);
