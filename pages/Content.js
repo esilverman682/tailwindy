@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 
@@ -49,7 +50,7 @@ const Content = () => {
       <motion.div style={{ y, filter }} className="box-container">
         {boxCount.map((box, index) => (
           <div className="box" key={index}>
-            <img src="https://images.unsplash.com/photo-1566545455366-bcae28fd3929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" />
+            <img alt="" src="https://images.unsplash.com/photo-1566545455366-bcae28fd3929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" />
           </div>
         ))}
       </motion.div>
