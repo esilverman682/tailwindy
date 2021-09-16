@@ -7,7 +7,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
  import { Power2, Back } from "gsap";
  
 
-{/*Reference https://codepen.io/GreenSock/pen/OJyPmgX */}
+{/*Reference https://codesandbox.io/s/gsap-animations-8mv7u?file=/src/styles.css */}
  export default function Some() {
  
   gsap.registerPlugin(ScrollTrigger);
