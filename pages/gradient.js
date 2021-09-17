@@ -4,7 +4,7 @@
 import { useEffect } from "react";
  import HappyText from "./happyText";
  
-{{/*REFERENCE: https://greensock.com/forums/topic/24887-gsap-2x-clamp-carousel-example/ */ }}
+{{/*REFERENCE: https://animated-gradient-background-generator.netlify.app/ */ }}
  
  export default function Some() {
  
