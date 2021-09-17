@@ -27,11 +27,11 @@ const ST = ScrollTrigger.create({
 ScrollTrigger.addEventListener("refreshInit", () => progress = ST.progress);
 ScrollTrigger.addEventListener("refresh", () => ST.scroll(progress * ScrollTrigger.maxScroll(window)));
 
-  });
+}, []);
 
   return (
  <>
-<div class="content">
+<div className="content">
   <h1>GreenSock Starter Template</h1>
   <p>This loads <strong>ALL</strong> <a href="https://greensock.com">GSAP</a> files including a trial version of every <a href="https://codepen.io/GreenSock/full/OPqpRJ/">bonus plugin</a> (usable on codepen.io only). Hit the "fork" button in the bottom right and experiment to your heart's content. Enjoy!</p>
 </div>
