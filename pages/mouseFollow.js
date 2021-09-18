@@ -2,9 +2,9 @@
  import gsap from 'gsap'
 import { useEffect } from 'react';
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { element } from 'prop-types';
  
-{/*Reference https://codepen.io/hexagoncircle/pen/LYpaPQp */}
+ 
+{/*Reference https://codepen.io/GreenSock/pen/KKmBGvz*/}
  export default function Some() {
  
   useEffect(() => {
