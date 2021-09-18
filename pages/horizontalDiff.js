@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 
-{{/*Ref: https://codepen.io/GreenSock/pen/XWMPLQg*/}}
+{{/*Ref: https://codepen.io/GreenSock/pen/ZEyzaxv */}}
 export default function Some() {  
 
   useEffect(() => {
