@@ -5,12 +5,12 @@ import { useEffect } from 'react';
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 
-{{/*Ref: https://codepen.io/GreenSock/pen/YzyqVNe */}}
+{{/*Ref: https://codepen.io/GreenSock/pen/XWMPLQg*/}}
 export default function Some() {  
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(ScrollTrigger);
+   
 
     let masks = gsap.utils.toArray(".img-mask");
     
