@@ -3,7 +3,7 @@
 import gsap from 'gsap'
 import { useEffect } from 'react';
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-  
+{{/*Ref: https://codepen.io/GreenSock/pen/YzyqVNe */}}
 export default function Some() {  
 
   useEffect(() => {
