@@ -29,6 +29,10 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/accordion</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/blog</loc>
   </url>
 
@@ -37,11 +41,31 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/boyGirl</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/colorSectionscroll</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/colorbarScroll</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/detector</loc>
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/dream</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/drink</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/gradient</loc>
   </url>
 
   <url>
@@ -57,6 +81,10 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/horizon</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/horizontalScrollin</loc>
   </url>
 
@@ -69,11 +97,23 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/imageReveal</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app</loc>
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/infiniteCarousel</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/intros</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/leftChange</loc>
   </url>
 
   <url>
@@ -109,6 +149,10 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/menuGsap</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/mountainClouds</loc>
   </url>
 
@@ -117,7 +161,7 @@
   </url>
 
   <url>
-    <loc>https://tailwind-nextjs-starter-blog.vercel.app/one</loc>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/nonstopSlide</loc>
   </url>
 
   <url>
@@ -130,6 +174,10 @@
 
   <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/sane</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/search</loc>
   </url>
 
   <url>
@@ -153,11 +201,15 @@
   </url>
 
   <url>
-    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags</loc>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/stackCards</loc>
   </url>
 
   <url>
-    <loc>https://tailwind-nextjs-starter-blog.vercel.app/textWave</loc>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/strawberryReveal</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags</loc>
   </url>
 
   <url>
@@ -165,7 +217,19 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/trees</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/two</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/zoomOutimages</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/zoomText</loc>
   </url>
 
   <url>
@@ -217,19 +281,15 @@
   </url>
 
   <url>
-    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/feature</loc>
-  </url>
-
-  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/canada</loc>
   </url>
 
   <url>
-    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/code</loc>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/feature</loc>
   </url>
 
   <url>
-    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/features</loc>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/code</loc>
   </url>
 
   <url>
@@ -238,6 +298,10 @@
 
   <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/guide</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/features</loc>
   </url>
 
   <url>

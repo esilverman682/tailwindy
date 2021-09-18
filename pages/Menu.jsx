@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import gsap from "gsap";
 import React, { useState, useEffect, useRef } from "react";
 import colors from "nice-color-palettes";

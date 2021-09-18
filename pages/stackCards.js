@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import EasePack from 'gsap/dist/EasePack';
  
-{/*Reference: https://codepen.io/GreenSock/pen/XWRzjqG */}
+{/*Reference: https://codepen.io/GreenSock/pen/poPLNYx */}
  export default function Some() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, EasePack);
@@ -41,11 +41,26 @@ import EasePack from 'gsap/dist/EasePack';
   <h1>Stacking Cards</h1>
   <div className='container'>
     <div className='cards'>
-      <div className='card' style={{top:"40px"}}>1</div>
-      <div className='card' style={{top:"45px"}}>2</div>
-      <div className='card' style={{top:"50px"}}>3</div>
-      <div className='card' style={{top:"55px"}}>4</div>
-      <div className='card' style={{top:"60px"}}>5</div>
+      <div className='card' style={{top:"40px"}}>   <img
+                  src="https://images.unsplash.com/photo-1580331451062-99ff652288d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                  alt="girl"
+                /></div>
+      <div className='card' style={{top:"45px"}}>   <img
+                  src="https://images.unsplash.com/photo-1580331451062-99ff652288d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                  alt="girl"
+                /></div>
+      <div className='card' style={{top:"50px"}}>   <img
+                  src="https://images.unsplash.com/photo-1580331451062-99ff652288d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                  alt="girl"
+                /></div>
+      <div className='card' style={{top:"55px"}}>   <img
+                  src="https://images.unsplash.com/photo-1580331451062-99ff652288d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                  alt="girl"
+                /></div>
+      <div className='card' style={{top:"60px"}}>   <img
+                  src="https://images.unsplash.com/photo-1580331451062-99ff652288d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                  alt="girl"
+                /></div>
     </div>
   </div>
   <div className='container2'>
