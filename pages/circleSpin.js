@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import EasePack from 'gsap/dist/EasePack';
  
-{/*Reference: https://codepen.io/GreenSock/pen/XWRzjqG */}
+{/*Reference: https://codepen.io/GreenSock/pen/yLbmwyM*/}
  export default function Some() {
   useEffect(() => {
 
