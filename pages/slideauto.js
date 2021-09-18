@@ -7,7 +7,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
  import { Power2, Back } from "gsap";
  
 
-{/*Reference https://codesandbox.io/s/gsap-animations-8mv7u?file=/src/styles.css */}
+{/*Reference https://codepen.io/GreenSock/pen/BaZaXVR */}
  export default function Some() {
   useEffect(() => {
   gsap.registerPlugin(ScrollTrigger);
@@ -108,14 +108,14 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
   return (
     <>
  <section>
-  <div class="ImageScroll__wrapper">
-    <div class="ImageScroll__image    ImageScroll__image-1"></div>
+  <div className="ImageScroll__wrapper">
+    <div className="ImageScroll__image    ImageScroll__image-1"></div>
   </div> 
-    <div class="ImageScroll__wrapper">
-    <div class="ImageScroll__image    ImageScroll__image-2"></div>
+    <div className="ImageScroll__wrapper">
+    <div className="ImageScroll__image    ImageScroll__image-2"></div>
   </div> 
-    <div class="ImageScroll__wrapper">
-    <div class="ImageScroll__image    ImageScroll__image-3"></div>
+    <div className="ImageScroll__wrapper">
+    <div className="ImageScroll__image    ImageScroll__image-3"></div>
   </div> 
 </section>
 

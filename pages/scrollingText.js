@@ -27,8 +27,8 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 <div id="section">
   <div id="background">
     <svg viewBox="-15 -15 30 30" width="50%" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="0" cy="0" r="10" stroke="white" stroke-width="0.1" fill="none"></circle>
-          <circle cx="0" cy="0" r="15" stroke="white" stroke-width="0.1" fill="none"></circle>
+          <circle cx="0" cy="0" r="10" stroke="white" strokeWidth="0.1" fill="none"></circle>
+          <circle cx="0" cy="0" r="15" stroke="white" strokeWidth="0.1" fill="none"></circle>
         </svg>
   </div>
   <h3 id="title">Some Title</h3>
