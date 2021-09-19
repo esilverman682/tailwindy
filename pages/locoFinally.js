@@ -1,7 +1,21 @@
  
 import { useRef, useEffect } from "react";
 
-const App = () => {
+
+{{ /* REFERENCE: https://codesandbox.io/s/10vn0?file=/styles/styles.css:0-906  
+
+  1. Create a constant with a unique name....  
+  2. Create a constant name for a useRef 
+  3. Create a useEffect with a conditional which includes typeof window === "undefined" and return it  
+  4. Create a constant name to hold the locomomotive IMPORTwhich includes new LocomotiveScroll .default
+  5. Scroll destroy it
+  5b. Parent div call useRef by name
+  6. Export the constant
+*/
+}}
+
+const Snapp = () => {
+ 
   const scrollRef = useRef();
 
   useEffect(() => {
@@ -95,4 +109,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Snapp;
