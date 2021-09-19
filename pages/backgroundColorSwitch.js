@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-{/*Reference https://codepen.io/GreenSock/pen/BaZaXVR */}
+{/*Reference https://codepen.io/GreenSock/pen/powvxNx AND https://codepen.io/GreenSock/pen/XWgbXbz for fill vs stroke*/}
  export default function Some() {
  
   useEffect(() => {
@@ -61,7 +61,12 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
   return (
   
     <div> 
-      <div className="section one">section 1</div>
+      <div className="section one">section 1
+      <svg>
+  <path d="M20 20 l 100 0 0 100 -100 0 z" fill="green"></path>
+  <path d="M140 20 l 100 0 0 100 -100 0 z" stroke="green" strokeWidth="2" fill="none"></path>
+</svg>
+</div>
       <div className="section two">
         <strong>section 2</strong>
         <br />
