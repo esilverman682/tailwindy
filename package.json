@@ -45,6 +45,7 @@
     "react-dom": "17.0.2",
     "react-granim": "^1.1.0",
     "react-happytext": "^1.0.1",
+    "react-locomotive-scroll": "^0.2.0",
     "react-lottie": "^1.2.3",
     "react-router": "^5.2.1",
     "react-router-dom": "^5.3.0",
