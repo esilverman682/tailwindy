@@ -51,7 +51,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
           const velocity = Math.abs(self.getVelocity())
           const clamp = gsap.utils.clamp(0, 6)
           tl.timeScale(clamp(velocity / 100))
-          gsap.to(tl, { timeScale: 1, ease: 'power1.inOut', duration: 2, overwrite: true })
+          gsap.to(tl, { timeScale: 1, ease: 'power3.inOut', duration: 2, overwrite: true })
         },
       });
   

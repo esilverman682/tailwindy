@@ -3,13 +3,12 @@
 import { useEffect } from 'react';
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-{/*Reference https://codepen.io/GreenSock/pen/vYmzGWV */}
+{/*Reference https://codepen.io/GreenSock/pen/BaZaXVR */}
  export default function Some() {
  
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
  
-
     ScrollTrigger.create({
       trigger: '#title',
       start: "top center",
