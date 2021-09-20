@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
  
 import { useRef, useEffect } from "react";
 
@@ -30,17 +31,50 @@ const Snapp = () => {
       });
     });
 
-    return () => scroll.destroy();
+ //   return () => scroll.destroy();
   }, []);
 
   return (
     <div className="App" ref={scrollRef}>
       <h2>Scroll and Fade in React</h2>
-      <h4>None</h4>
+      <h4 data-scroll
+          data-scroll-speed="2"
+          data-scroll-position="top"
+          data-scroll-direction="horizontal" >None</h4>
       <h4>Something</h4>
       <h4 data-scroll data-scroll-speed="1" style={{ marginTop: "2.65rem" }}>
         Something Else
       </h4>
+      <img  data-scroll data-scroll-speed="1"
+            className="greensock-icon"
+            height="874"
+            src="https://source.unsplash.com/random/1240x874?sig=76"
+            width="1240"
+            alt=""
+          />
+      <div data-scroll data-scroll-speed="4" data-scroll-position="middle" data-scroll-direction="horizontal">
+        <img  
+          className="greensock-icon"
+          height="874"
+          src="https://source.unsplash.com/random/1240x874?sig=76"
+          width="1240"
+          alt=""
+        />
+      </div>
+<div data-scroll data-scroll-speed="-5" data-scroll-position="bottom" data-scroll-direction="horizontal">
+
+  <div>       
+    <img 
+            className="greensock-icon"
+            height="874"
+            src="https://source.unsplash.com/random/1240x874?sig=76"
+            width="1240"
+            alt=""
+          />
+  </div>
+  <div>9 afasdf asdfasdfasdf asfasdfasdfasasdfasd a sdfas a asdfas asdf</div>
+</div>
+
       <style
       dangerouslySetInnerHTML={{
           __html: `
