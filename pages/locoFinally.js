@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
  
 import { useRef, useEffect } from "react";
-
+import gsap from 'gsap'
 
 {{ /* REFERENCE: https://codesandbox.io/s/10vn0?file=/styles/styles.css:0-906  
 
