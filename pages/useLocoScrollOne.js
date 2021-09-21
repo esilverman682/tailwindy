@@ -68,50 +68,62 @@ ScrollTrigger.refresh();
         </div>
       </div>
     </div>
-
     <h2>Scroll and Fade in React</h2>
     <h4 data-scroll
-        data-scroll-speed="2"
+        data-scroll-speed="1"
         data-scroll-position="top"
-        data-scroll-direction="horizontal" >None</h4>
+        data-scroll-direction="horizontal" >
+          None
+    </h4>
     <h4>Something</h4>
-    <h4 data-scroll data-scroll-speed="1" style={{ marginTop: "2.65rem" }}>
-      Something Else
+    <h4 data-scroll data-scroll-speed="1" 
+        style={{ 
+          marginTop: "2.65rem"
+        }}>
+        Something Else
     </h4>
 
-
-<div data-scroll data-scroll-speed="2" data-scroll-position="left" data-scroll-direction="horizontal">
-    <img   
-          className="greensock-icon"
-          height="874"
-          src="https://source.unsplash.com/random/1240x874?sig=76"
-          width="1240"
-          alt=""
-        />
-</div>        
-    <div data-scroll data-scroll-speed="1" data-scroll-position="right" data-scroll-direction="horizontal">
-      <img  
-        className="greensock-icon"
-        height="874"
-        src="https://source.unsplash.com/random/1240x874?sig=76"
-        width="1240"
-        alt=""
-      />
-    </div>
-    <div data-scroll data-scroll-speed="0" data-scroll-position="bottom" data-scroll-direction="horizontal">
-      <img 
-            className="greensock-icon"
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=76"
-            width="1240"
- 
-            alt=""
-     />
-    </div>
     <div>9 afasdf asdfasdfasdf asfasdfasdfasasdfasd a sdfas a asdfas asdf</div>
       <style
       dangerouslySetInnerHTML={{
           __html: `
+
+.fixed_wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 818px;
+}
+
+.fixed_target {
+  bottom: -100vh;
+}
+.fixed,
+.fixed_target {
+  position: absolute;
+  top: -100vh;
+  right: 0;
+  left: 0;
+}
+.fixed {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+          h2 {
+            font-size: 20px;
+          }
+          h4 {
+            font-size: 30px;
+          }
+          
+          #trigger {
+            width: 100%;
+          
+          }
+          .spacer50{
+            margin-bottom: 50px;
+          }
           .App {
             font-family: sans-serif;
             text-align: center;
