@@ -42,7 +42,7 @@ const Snapp = () => {
     <div data-scroll-container ref={scrollRef}>
     <section data-scroll-section="">
       <p>Scroll</p>
-      <span class="lerp-wrap" data-scroll="">
+      <span className="lerp-wrap" data-scroll="">
         <span data-scroll="" data-scroll-delay="0.18" data-scroll-speed="6">F</span>
         <span data-scroll="" data-scroll-delay="0.14" data-scroll-speed="6">I</span>
         <span data-scroll="" data-scroll-delay="0.12" data-scroll-speed="6">R</span>
@@ -51,7 +51,7 @@ const Snapp = () => {
       </span>
     </section>
     <section data-scroll-section="">
-      <span class="lerp-wrap" data-scroll="">
+      <span className="lerp-wrap" data-scroll="">
         <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.18" data-scroll-speed="6">S</span>
         <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.14" data-scroll-speed="6">E</span>
         <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.12" data-scroll-speed="6">C</span>
@@ -61,7 +61,7 @@ const Snapp = () => {
       </span>
     </section>
     <section data-scroll-section="">
-      <span class="lerp-wrap" data-scroll="">
+      <span className="lerp-wrap" data-scroll="">
         <span data-scroll="" data-scroll-delay="0.18" data-scroll-speed="-2">T</span>
         <span data-scroll="" data-scroll-delay="0.14" data-scroll-speed="-2">H</span>
         <span data-scroll="" data-scroll-delay="0.12" data-scroll-speed="-2">I</span>
@@ -70,7 +70,7 @@ const Snapp = () => {
       </span>
     </section>
     <section data-scroll-section="">
-      <span class="lerp-wrap" data-scroll="">
+      <span className="lerp-wrap" data-scroll="">
         <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.18" data-scroll-speed="-6">L</span>
         <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.14" data-scroll-speed="-6">I</span>
         <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.12" data-scroll-speed="-6">N</span>
