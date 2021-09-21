@@ -33,6 +33,22 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/accordionBest</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/backgroundColorSwitch</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/bgChange</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/bgcolorSwitch</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/blog</loc>
   </url>
 
@@ -42,6 +58,10 @@
 
   <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/boyGirl</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/circleSpin</loc>
   </url>
 
   <url>
@@ -69,6 +89,10 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/gradientBoxes</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/gsapwordsRise</loc>
   </url>
 
@@ -82,6 +106,10 @@
 
   <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/horizon</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/horizontalDiff</loc>
   </url>
 
   <url>
@@ -117,11 +145,27 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/leftRight</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/leftscrollsRightstays</loc>
   </url>
 
   <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/lettersonScroll</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/loco</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/locoFinally</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/locoStarter</loc>
   </url>
 
   <url>
@@ -157,6 +201,10 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/mouseFollow</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/neat</loc>
   </url>
 
@@ -177,7 +225,7 @@
   </url>
 
   <url>
-    <loc>https://tailwind-nextjs-starter-blog.vercel.app/search</loc>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/scrollingText</loc>
   </url>
 
   <url>
@@ -197,6 +245,10 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/slideauto</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/slider</loc>
   </url>
 
@@ -213,6 +265,10 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/test</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/textcolorchangeHover</loc>
   </url>
 
@@ -222,6 +278,14 @@
 
   <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/two</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/useLocoScrollOne</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/useLocoScrollTwo</loc>
   </url>
 
   <url>
@@ -285,11 +349,15 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/code</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/feature</loc>
   </url>
 
   <url>
-    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/code</loc>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/features</loc>
   </url>
 
   <url>
@@ -298,10 +366,6 @@
 
   <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/guide</loc>
-  </url>
-
-  <url>
-    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/features</loc>
   </url>
 
   <url>

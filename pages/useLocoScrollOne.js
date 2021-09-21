@@ -22,7 +22,7 @@ const ScrollTriggerBlock = () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const scrollRef = useRef();
+  const scrollyRef = useRef();
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -31,12 +31,13 @@ const ScrollTriggerBlock = () => {
 
     const scroll = import("locomotive-scroll").then((LocomotiveScroll) => {
       new LocomotiveScroll.default({
-        el: scrollRef.current,
+        el: scrollyRef.current,
         smooth: true
       });
     });
+//return () => scroll.destroy();
 
- //   return () => scroll.destroy();
+
  setTimeout(() => {
   gsap.to("#trigger", {
     backgroundColor: "rgb(97 139 45)",
@@ -55,7 +56,7 @@ ScrollTrigger.refresh();
   }, []);
 
   return (
-    <div className="App" ref={scrollRef}>
+    <div className="App" ref={scrollyRef}>
      <div id="trigger" className="block col flex_center boxsh_3">
       <div className="w_100p bg_245_08">
         <h2>Child with trigger</h2>
@@ -77,14 +78,18 @@ ScrollTrigger.refresh();
     <h4 data-scroll data-scroll-speed="1" style={{ marginTop: "2.65rem" }}>
       Something Else
     </h4>
-    <img  data-scroll data-scroll-speed="1"
+
+
+<div data-scroll data-scroll-speed="2" data-scroll-position="left" data-scroll-direction="horizontal">
+    <img   
           className="greensock-icon"
           height="874"
           src="https://source.unsplash.com/random/1240x874?sig=76"
           width="1240"
           alt=""
         />
-    <div data-scroll data-scroll-speed="4" data-scroll-position="middle" data-scroll-direction="horizontal">
+</div>        
+    <div data-scroll data-scroll-speed="1" data-scroll-position="right" data-scroll-direction="horizontal">
       <img  
         className="greensock-icon"
         height="874"
@@ -93,12 +98,13 @@ ScrollTrigger.refresh();
         alt=""
       />
     </div>
-    <div data-scroll data-scroll-speed="-5" data-scroll-position="bottom" data-scroll-direction="horizontal">
+    <div data-scroll data-scroll-speed="0" data-scroll-position="bottom" data-scroll-direction="horizontal">
       <img 
             className="greensock-icon"
             height="874"
             src="https://source.unsplash.com/random/1240x874?sig=76"
             width="1240"
+ 
             alt=""
      />
     </div>
