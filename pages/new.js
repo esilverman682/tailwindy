@@ -7,7 +7,7 @@ import Loco from "./loco"
 import Guardians from './guardians'
 import LettersonScroll from './lettersonScroll'
 import LeftChange from './leftscrollsRightstays'
-import Intro from './intro'
+ 
 import Horizon from './horizon'
 import Neat from './neat'
 import Blur from './blur'
