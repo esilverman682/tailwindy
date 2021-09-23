@@ -129,6 +129,7 @@ ScrollTrigger.refresh();
       <style
       dangerouslySetInnerHTML={{
           __html: `
+         
           body, h1, p, section, div, header, footer, h2 {
             margin: 0;
             padding: 0;
@@ -204,9 +205,12 @@ ScrollTrigger.refresh();
             width: 100vw;
             background-color: #303030;
          }
+         footer {
+           height: 0;
+         }
           header {
             width: 100vw;
-            height: 100vh;
+            height: 0vh;
          }
           header .header-link {
             padding: 20px;
