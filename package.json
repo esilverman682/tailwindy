@@ -49,6 +49,7 @@
     "react-happytext": "^1.0.1",
     "react-locomotive-scroll": "^0.2.0",
     "react-lottie": "^1.2.3",
+    "react-parallax": "^3.3.0",
     "react-router": "^5.2.1",
     "react-router-dom": "^5.3.0",
     "react-spring": "^9.2.4",

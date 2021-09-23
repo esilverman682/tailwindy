@@ -1,4 +1,10 @@
 import React, { useEffect, useRef } from "react";
+
+{{
+  /*
+  REFERENCE:https://codesandbox.io/s/epic-leavitt-nhs7q?file=/src/styles.css 
+  */
+}}
 //import styled from "styled-components/dist/styled-components"
  import styled from "styled-components"
 
@@ -63,7 +69,7 @@ export default function App() {
   return (
     <>
     <div className="App">
-      {/* <Wrapper ref={scrollRef}> */}
+ <Wrapper ref={scrollRef}> 
       <Scroll ref={scrollRef} data-scroll-container>
         {/* <Gallery>
           <h1
@@ -105,7 +111,7 @@ export default function App() {
           />
         </ImgWrap>
       </Scroll>
-      {/* </Wrapper> */}
+  </Wrapper> 
     </div>
     <style
       dangerouslySetInnerHTML={{

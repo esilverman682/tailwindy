@@ -5,6 +5,10 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/Commento</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/Content</loc>
   </url>
 
@@ -13,7 +17,7 @@
   </url>
 
   <url>
-    <loc>https://tailwind-nextjs-starter-blog.vercel.app/Intro</loc>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/Hello</loc>
   </url>
 
   <url>
@@ -165,6 +169,14 @@
   </url>
 
   <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/locoImageEffect</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/locoLerp</loc>
+  </url>
+
+  <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/locoStarter</loc>
   </url>
 
@@ -206,6 +218,14 @@
 
   <url>
     <loc>https://tailwind-nextjs-starter-blog.vercel.app/neat</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/new</loc>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/no</loc>
   </url>
 
   <url>
@@ -349,11 +369,11 @@
   </url>
 
   <url>
-    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/code</loc>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/feature</loc>
   </url>
 
   <url>
-    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/feature</loc>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/code</loc>
   </url>
 
   <url>
