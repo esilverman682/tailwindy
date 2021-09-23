@@ -77,7 +77,7 @@ export default function Some() {
           ease: 0.1,
           // current value setter
           setValue: () => {
-            const toValue = 1.5;
+            const toValue = 3.5;
             const fromValue = 1;
             const val = MathUtils.map(
               this.props.top - docScroll,
@@ -308,7 +308,7 @@ export default function Some() {
 <>
 <main>
       <div data-scroll className="page page--layout-2">
-        <h1 className="page__title fixed">Smooth Scrolling Image Effects</h1>
+   {/*     <h1 className="page__title fixed">Smooth Scrolling Image Effects</h1>
         <div className="meta">
           <div className="mata__link">
             <a href="#">Article</a>
@@ -322,15 +322,15 @@ export default function Some() {
             <a href="#" className="meta__demo">04</a>
             <a href="#" className="meta__demo">05</a>
           </div>
-        </div>
+  </div> */}
         <div className="content content--full content--alternate">
           <div className="content__item content__item--wide">
             <span className="content__item-number">01</span>
             <div className="content__item-imgwrap">
               <div
                 className="content__item-img"
-                style={{backgroundImage:"url(/assets/img/17.webp)"}}
-              > <Image src={require('/assets/17.webp')} alt="image" /></div>
+                style={{backgroundImage:"url(/assets/beijing.webp)"}}
+              > <Image src={require('/assets/beijing.webp')}  alt="image" /></div>
             </div>
        
             <div className="content__item-deco"></div>
@@ -341,7 +341,9 @@ export default function Some() {
               Little tress and bushes grow however makes them happy.
             </p>
           </div>
-          <p className="credits">Photoraphy by Frankie Cordoba</p>
+        {/* 
+     <p className="credits">Photoraphy by Frankie Cordoba</p>
+            */} 
         </div>
       </div>
     </main>
@@ -350,6 +352,9 @@ export default function Some() {
   <style
     dangerouslySetInnerHTML={{
         __html: `
+        footer {
+          display:none;
+        }
         *,
         *::after,
         *::before {
@@ -376,8 +381,8 @@ export default function Some() {
           --color-bg: #efded3;
           --color-link: #000;
           --color-link-hover: #dc6e25;
-          --aspect-ratio: 1/1.5;
-          --imgwidthmax: 500px;
+          --aspect-ratio: 1/.9;
+          --imgwidthmax: 1073px;
           --size-title: 10rem;
           --font-weight-title: 400;
           color: var(--color-text);
@@ -414,7 +419,7 @@ export default function Some() {
         
         .page {
           display: grid;
-          padding: 5vw;
+          padding: 8vh 0px;
           max-width: 1400px;
           margin: 0 auto;
           grid-template-columns: 100%;
@@ -446,7 +451,7 @@ export default function Some() {
         }
         
         .meta__demos {
-          margin-top: 1rem;
+          margin-top: 1--rem;
         }
         
         .meta__demo {
@@ -460,7 +465,7 @@ export default function Some() {
         
         .content {
           grid-area: grid;
-          margin: 25vh 0 30vh;
+          margin: 2vh 0 30vh;
         }
         
         .content--full {
@@ -488,8 +493,9 @@ export default function Some() {
         }
         
         .content--alternate .content__item {
-          margin: 0 auto 15vh;
-        }
+        //  margin: 0 auto 15vh;
+      margin 0;  
+      }
         
         .content--alternate .content__item:nth-child(even) {
           margin-left: auto;
@@ -508,7 +514,7 @@ export default function Some() {
         
         .content__item-img {
           --overflow: 40px;
-          height: calc(100% + (2 * var(--overflow)));
+          height: calc(0% + (2 * var(--overflow)));
           top: calc(-1 * var(--overflow));
           width: 100%;
           position: absolute;
@@ -529,7 +535,7 @@ export default function Some() {
         
         .content__item:nth-child(even) .content__item-number {
           right: auto;
-          left: -7vw;
+          left: -700vw;
         }
         
         .content__item-title {
