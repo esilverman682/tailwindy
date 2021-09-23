@@ -4,7 +4,7 @@ import { gsap, Power2 } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import  { useEffect } from "react"; 
 import Image from "next/image";
-{{ /* BEST IMAGE REVEAL REFERENCE : https://www.youtube.com/watch?v=qlx3j0Jm9rY   */}}
+{{ /*   REFERENCE : https://codesandbox.io/s/smooth-scroll-wjip5?file=/src/styles.css:0-4096  */}}
 export default function Some() {
  
   useEffect(() => {
