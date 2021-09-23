@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from "react";
-import styled from "styled-components/dist/styled-components"
- 
-// const Wrapper = styled.div`
-//   padding-top: 20vh;
-//   min-height: 300vh;
-// `;
+//import styled from "styled-components/dist/styled-components"
+ import styled from "styled-components"
+
+  const Wrapper = styled.div`
+   padding-top: 20vh;
+    min-height: 300vh;
+  `;
 
 const ImgWrap = styled.div`
   width: 100%;
@@ -59,15 +60,6 @@ export default function App() {
 
  //return () => scroll.destroy();
 
-
-  
- 
- 
-
- 
-
-
-
   return (
     <>
     <div className="App">
@@ -76,7 +68,6 @@ export default function App() {
         {/* <Gallery>
           <h1
             data-scroll
-            
           >
             Hello CodeSandbox
           </h1>
