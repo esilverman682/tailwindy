@@ -3,6 +3,7 @@ import React  from "react";
 import { gsap, Power2 } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import  { useEffect } from "react"; 
+import Image from "next/image";
 {{ /* BEST IMAGE REVEAL REFERENCE : https://www.youtube.com/watch?v=qlx3j0Jm9rY   */}}
 export default function Some() {
  
@@ -10,236 +11,577 @@ export default function Some() {
     gsap.registerPlugin(ScrollTrigger);
 
  
+/**
+ * demo.js
+ * http://www.codrops.com
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ * Copyright 2019, Codrops
+ * http://www.codrops.com
+ */
+ {
+  // helper functions
+  const MathUtils = {
+    // map number x from range [a, b] to [c, d]
+    map: (x, a, b, c, d) => ((x - a) * (d - c)) / (b - a) + c,
+    // linear interpolation
+    lerp: (a, b, n) => (1 - n) * a + n * b,
+    // Random float
+    getRandomFloat: (min, max) => (Math.random() * (max - min) + min).toFixed(2)
+  };
 
-    let iteration = 0; // gets iterated when we scroll all the way to the end or start and wraps around - allows us to smoothly continue the playhead scrubbing in the correct direction.
-    
-    const spacing = 0.1,    // spacing of the cards (stagger)
-      snap = gsap.utils.snap(spacing), // we'll use this to snap the playhead on the seamlessLoop
-      cards = gsap.utils.toArray('.cards li'),
-      seamlessLoop = buildSeamlessLoop(cards, spacing),
-      scrub = gsap.to(seamlessLoop, { // we reuse this tween to smoothly scrub the playhead on the seamlessLoop
-        totalTime: 0,
-        duration: 0.5,
-        ease: "power3",
-        paused: true
-      }),
-      trigger = ScrollTrigger.create({
-        start: 0,
-        onUpdate(self) {
-          if (self.progress === 1 && self.direction > 0 && !self.wrapping) {
-            wrapForward(self);
-          } else if (self.progress < 1e-5 && self.direction < 0 && !self.wrapping) {
-            wrapBackward(self);
-          } else {
-            scrub.vars.totalTime = snap((iteration + self.progress) * seamlessLoop.duration());
-            scrub.invalidate().restart(); // to improve performance, we just invalidate and restart the same tween. No need for overwrites or creating a new tween on each update.
-            self.wrapping = false;
+  // body element
+  const body = document.body;
+
+  // calculate the viewport size
+  let winsize;
+  const calcWinsize = () =>
+    (winsize = { width: window.innerWidth, height: window.innerHeight });
+  calcWinsize();
+  // and recalculate on resize
+  window.addEventListener("resize", calcWinsize);
+
+  // scroll position
+  let docScroll;
+  // for scroll speed calculation
+  let lastScroll;
+  let scrollingSpeed = 0;
+  // scroll position update function
+  const getPageYScroll = () =>
+    (docScroll = window.pageYOffset || document.documentElement.scrollTop);
+  window.addEventListener("scroll", getPageYScroll);
+
+  // Item
+  class Item {
+    constructor(el) {
+      // the .item element
+      this.DOM = { el: el };
+      // the inner image
+      this.DOM.image = this.DOM.el.querySelector(".content__item-img");
+      this.DOM.imageWrapper = this.DOM.image.parentNode;
+      this.DOM.title = this.DOM.el.querySelector(".content__item-title");
+      this.renderedStyles = {
+        // here we define which property will change as we scroll the page and the item is inside the viewport
+        // in this case we will be:
+        // - scaling the inner image
+        // - translating the item's title
+        // we interpolate between the previous and current value to achieve a smooth effect
+        imageScale: {
+          // interpolated value
+          previous: 0,
+          // current value
+          current: 0,
+          // amount to interpolate
+          ease: 0.1,
+          // current value setter
+          setValue: () => {
+            const toValue = 1.5;
+            const fromValue = 1;
+            const val = MathUtils.map(
+              this.props.top - docScroll,
+              winsize.height,
+              -1 * this.props.height,
+              fromValue,
+              toValue
+            );
+            return Math.max(Math.min(val, toValue), fromValue);
           }
         },
-        end: "+=3000",
-        pin: ".gallery"
-      });
-    
-    function wrapForward(trigger) { // when the ScrollTrigger reaches the end, loop back to the beginning seamlessly
-      iteration++;
-      trigger.wrapping = true;
-      trigger.scroll(trigger.start + 1);
-    }
-    
-    function wrapBackward(trigger) { // when the ScrollTrigger reaches the start again (in reverse), loop back to the end seamlessly
-      iteration--;
-      if (iteration < 0) { // to keep the playhead from stopping at the beginning, we jump ahead 10 iterations
-        iteration = 9;
-        seamlessLoop.totalTime(seamlessLoop.totalTime() + seamlessLoop.duration() * 10);
-        scrub.pause(); // otherwise it may update the totalTime right before the trigger updates, making the starting value different than what we just set above. 
-      }
-      trigger.wrapping = true;
-      trigger.scroll(trigger.end - 1);
-    }
-    
-    function scrubTo(totalTime) { // moves the scroll position to the place that corresponds to the totalTime value of the seamlessLoop, and wraps if necessary.
-      let progress = (totalTime - seamlessLoop.duration() * iteration) / seamlessLoop.duration();
-      if (progress > 1) {
-        wrapForward(trigger);
-      } else if (progress < 0) {
-        wrapBackward(trigger);
-      } else {
-        trigger.scroll(trigger.start + progress * (trigger.end - trigger.start));
-      }
-    }
-    
-    document.querySelector(".next").addEventListener("click", () => scrubTo(scrub.vars.totalTime + spacing));
-    document.querySelector(".prev").addEventListener("click", () => scrubTo(scrub.vars.totalTime - spacing));
-    
-    
-    
-    
-    function buildSeamlessLoop(items, spacing) {
-      let overlap = Math.ceil(1 / spacing), // number of EXTRA animations on either side of the start/end to accommodate the seamless looping
-        startTime = items.length * spacing + 0.5, // the time on the rawSequence at which we'll start the seamless loop
-        loopTime = (items.length + overlap) * spacing + 1, // the spot at the end where we loop back to the startTime 
-        rawSequence = gsap.timeline({paused: true}), // this is where all the "real" animations live
-        seamlessLoop = gsap.timeline({ // this merely scrubs the playhead of the rawSequence so that it appears to seamlessly loop
-          paused: true,
-          repeat: -1, // to accommodate infinite scrolling/looping
-          onRepeat() { // works around a super rare edge case bug that's fixed GSAP 3.6.1
-            this._time === this._dur && (this._tTime += this._dur - 0.01);
+        titleTranslationY: {
+          previous: 0,
+          current: 0,
+          ease: 0.1,
+          fromValue: Number(MathUtils.getRandomFloat(30, 400)),
+          setValue: () => {
+            const fromValue = this.renderedStyles.titleTranslationY.fromValue;
+            const toValue = -1 * fromValue;
+            const val = MathUtils.map(
+              this.props.top - docScroll,
+              winsize.height,
+              -1 * this.props.height,
+              fromValue,
+              toValue
+            );
+            return fromValue < 0
+              ? Math.min(Math.max(val, fromValue), toValue)
+              : Math.max(Math.min(val, fromValue), toValue);
           }
-        }),
-        l = items.length + overlap * 2,
-        time = 0,
-        i, index, item;
-    
-      // set initial state of items
-      gsap.set(items, {xPercent: 400, opacity: 0, scale: 0});
-    
-      // now loop through and create all the animations in a staggered fashion. Remember, we must create EXTRA animations at the end to accommodate the seamless looping.
-      for (i = 0; i < l; i++) {
-        index = i % items.length;
-        item = items[index];
-        time = i * spacing;
-        rawSequence.fromTo(item, {scale: 0, opacity: 0}, {scale: 1, opacity: 1, zIndex: 100, duration: 0.5, yoyo: true, repeat: 1, ease: "power1.in", immediateRender: false}, time)
-                   .fromTo(item, {xPercent: 400}, {xPercent: -400, duration: 1, ease: "none", immediateRender: false}, time);
-        i <= items.length && seamlessLoop.add("label" + i, time); // we don't really need these, but if you wanted to jump to key spots using labels, here ya go.
-      }
-      
-      // here's where we set up the scrubbing of the playhead to make it appear seamless. 
-      rawSequence.time(startTime);
-      seamlessLoop.to(rawSequence, {
-        time: loopTime,
-        duration: loopTime - startTime,
-        ease: "none"
-      }).fromTo(rawSequence, {time: overlap * spacing + 1}, {
-        time: startTime,
-        duration: startTime - (overlap * spacing + 1),
-        immediateRender: false,
-        ease: "none"
-      });
-      return seamlessLoop;
+        }
+      };
+      // gets the item's height and top (relative to the document)
+      this.getSize();
+      // set the initial values
+      this.update();
+      // use the IntersectionObserver API to check when the element is inside the viewport
+      // only then the element styles will be updated
+      this.observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(
+            entry => (this.isVisible = entry.intersectionRatio > 0)
+          );
+        },
+        { rootMargin: "1000px" }
+      );
+      this.observer.observe(this.DOM.el);
+      // init/bind events
+      this.initEvents();
     }
+    update() {
+      // sets the initial value (no interpolation)
+      for (const key in this.renderedStyles) {
+        this.renderedStyles[key].current = this.renderedStyles[
+          key
+        ].previous = this.renderedStyles[key].setValue();
+      }
+      // apply changes/styles
+      this.layout();
+    }
+    getSize() {
+      const rect = this.DOM.el.getBoundingClientRect();
+      this.props = {
+        // item's height
+        height: rect.height,
+        // offset top relative to the document
+        top: docScroll + rect.top
+      };
+    }
+    initEvents() {
+      window.addEventListener("resize", () => this.resize());
+    }
+    resize() {
+      // gets the item's height and top (relative to the document)
+      this.getSize();
+      // on resize reset sizes and update styles
+      this.update();
+    }
+    render() {
+      // update the current and interpolated values
+      for (const key in this.renderedStyles) {
+        this.renderedStyles[key].current = this.renderedStyles[key].setValue();
+        this.renderedStyles[key].previous = MathUtils.lerp(
+          this.renderedStyles[key].previous,
+          this.renderedStyles[key].current,
+          this.renderedStyles[key].ease
+        );
+      }
+
+      // and apply changes
+      this.layout();
+    }
+    layout() {
+      // scale the image
+      this.DOM.image.style.transform = `scale3d(${
+        this.renderedStyles.imageScale.previous
+      },${this.renderedStyles.imageScale.previous},1)`;
+      // translate the title
+      this.DOM.title.style.transform = `translate3d(0,${
+        this.renderedStyles.titleTranslationY.previous
+      }px,0)`;
+    }
+  }
+
+  // SmoothScroll
+  class SmoothScroll {
+    constructor() {
+      // the <main> element
+      this.DOM = { main: document.querySelector("main") };
+      // the scrollable element
+      // we translate this element when scrolling (y-axis)
+      this.DOM.scrollable = this.DOM.main.querySelector("div[data-scroll]");
+      // the items on the page
+      this.items = [];
+      this.DOM.content = this.DOM.main.querySelector(".content");
+      [...this.DOM.content.querySelectorAll(".content__item")].forEach(item =>
+        this.items.push(new Item(item))
+      );
+      // here we define which property will change as we scroll the page
+      // in this case we will be translating on the y-axis
+      // we interpolate between the previous and current value to achieve the smooth scrolling effect
+      this.renderedStyles = {
+        translationY: {
+          // interpolated value
+          previous: 0,
+          // current value
+          current: 0,
+          // amount to interpolate
+          ease: 0.1,
+          // current value setter
+          // in this case the value of the translation will be the same like the document scroll
+          setValue: () => docScroll
+        }
+      };
+      // set the body's height
+      this.setSize();
+      // set the initial values
+      this.update();
+      // the <main> element's style needs to be modified
+      this.style();
+      // init/bind events
+      this.initEvents();
+      // start the render loop
+      requestAnimationFrame(() => this.render());
+    }
+    update() {
+      // sets the initial value (no interpolation) - translate the scroll value
+      for (const key in this.renderedStyles) {
+        this.renderedStyles[key].current = this.renderedStyles[
+          key
+        ].previous = this.renderedStyles[key].setValue();
+      }
+      // translate the scrollable element
+      this.layout();
+    }
+    layout() {
+      this.DOM.scrollable.style.transform = `translate3d(0,${-1 *
+        this.renderedStyles.translationY.previous}px,0)`;
+    }
+    setSize() {
+      // set the heigh of the body in order to keep the scrollbar on the page
+      body.style.height = `${this.DOM.scrollable.scrollHeight}px`;
+    }
+    style() {
+      // the <main> needs to "stick" to the screen and not scroll
+      // for that we set it to position fixed and overflow hidden
+      this.DOM.main.style.position = "fixed";
+      this.DOM.main.style.width = this.DOM.main.style.height = "100%";
+      this.DOM.main.style.top = this.DOM.main.style.left = 0;
+      this.DOM.main.style.overflow = "hidden";
+    }
+    initEvents() {
+      // on resize reset the body's height
+      window.addEventListener("resize", () => this.setSize());
+    }
+    render() {
+      // Get scrolling speed
+      // Update lastScroll
+      scrollingSpeed = Math.abs(docScroll - lastScroll);
+      lastScroll = docScroll;
+
+      // update the current and interpolated values
+      for (const key in this.renderedStyles) {
+        this.renderedStyles[key].current = this.renderedStyles[key].setValue();
+        this.renderedStyles[key].previous = MathUtils.lerp(
+          this.renderedStyles[key].previous,
+          this.renderedStyles[key].current,
+          this.renderedStyles[key].ease
+        );
+      }
+      // and translate the scrollable element
+      this.layout();
+
+      // for every item
+      for (const item of this.items) {
+        // if the item is inside the viewport call it's render function
+        // this will update item's styles, based on the document scroll value and the item's position on the viewport
+        if (item.isVisible) {
+          if (item.insideViewport) {
+            item.render();
+          } else {
+            item.insideViewport = true;
+            item.update();
+          }
+        } else {
+          item.insideViewport = false;
+        }
+      }
+
+      // loop..
+      requestAnimationFrame(() => this.render());
+    }
+  }
+
+  /***********************************/
+  /********** Preload stuff **********/
+
+  getPageYScroll();
+  lastScroll = docScroll;
+  new SmoothScroll();
+}
+
 }, []);
  
  
 
   return (
 <>
-<div className="gallery">
-  <ul className="cards">
-    <li>0</li>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>6</li>
-    <li>7</li>
-    <li>8</li>
-    <li>9</li>
-    <li>10</li>
-    <li>11</li>
-    <li>12</li>
-    <li>13</li>
-    <li>14</li>
-    <li>15</li>
-    <li>16</li>
-    <li>17</li>
-    <li>18</li>
-    <li>19</li>
-    <li>20</li>
-    <li>21</li>
-    <li>22</li>
-    <li>23</li>
-    <li>24</li>
-    <li>25</li>
-    <li>26</li>
-    <li>27</li>
-    <li>28</li>
-    <li>29</li>
-    <li>30</li>
-  </ul>
-  <div className="actions">
-    <button className="prev">Prev</button>
-    <button className="next">Next</button>
-  </div>
-</div>
+<main>
+      <div data-scroll className="page page--layout-2">
+        <h1 className="page__title fixed">Smooth Scrolling Image Effects</h1>
+        <div className="meta">
+          <div className="mata__link">
+            <a href="#">Article</a>
+            <a href="#">Previous</a>
+            <a href="#">Github</a>
+          </div>
+          <div className="meta__demos">
+            <a href="#" className="meta__demo meta__demo--current">01</a>
+            <a href="#" className="meta__demo">02</a>
+            <a href="#" className="meta__demo">03</a>
+            <a href="#" className="meta__demo">04</a>
+            <a href="#" className="meta__demo">05</a>
+          </div>
+        </div>
+        <div className="content content--full content--alternate">
+          <div className="content__item content__item--wide">
+            <span className="content__item-number">01</span>
+            <div className="content__item-imgwrap">
+              <div
+                className="content__item-img"
+                style={{backgroundImage:"url(/assets/img/17.webp)"}}
+              > <Image src={require('/assets/17.webp')} alt="image" /></div>
+            </div>
+       
+            <div className="content__item-deco"></div>
+            <h2 className="content__item-title">
+              Oh
+            </h2>
+            <p className="content__item-description">
+              Little tress and bushes grow however makes them happy.
+            </p>
+          </div>
+          <p className="credits">Photoraphy by Frankie Cordoba</p>
+        </div>
+      </div>
+    </main>
 
 
   <style
     dangerouslySetInnerHTML={{
         __html: `
-
-@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
-
-body, html
-{
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	font-family: 'Lora', serif;
-	color: #303030;
-}
-
-.night-label{
-	opacity: 0.2;
-}
-
-body
-{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #FEF9EA;
-}
-
-.layout
-{
-	width: 70vw;
-	max-width: 300px;
-	min-width: 250px;
-	height: 30vh;
-	display: grid;
-	grid-template-columns: 1fr 2fr 1fr;
-	justify-content: center;
-	align-items: center;
-	gap: 30px;
-	font-size: 25px;
-}
-
-.layout:nth-child(1)
-{
-	text-align: right;
-}
-
-svg
-{	
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
-}
-
-#night-content
-{
-	opacity: 0.5;
-}
-
-.inner-shadow
-{
-	stroke-opacity: 0.1;
-	stroke-width: 5;
-	stroke: black;
-	fill: none;
-}
-
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
- 
+        *,
+        *::after,
+        *::before {
+          box-sizing: border-box;
+        }
+        
+        :root {
+          font-size: 16px;
+        }
+        
+        body.cda-naked #cdawrap {
+          top: 5vw;
+          right: 5vw;
+          --cda-text-color: var(--color-link);
+          --cda-text-weight: inherit;
+          font-size: 14px;
+          --cda-width: 220px;
+          padding: 0;
+        }
+        
+        body {
+          margin: 0;
+          --color-text: #dc6e25;
+          --color-bg: #efded3;
+          --color-link: #000;
+          --color-link-hover: #dc6e25;
+          --aspect-ratio: 1/1.5;
+          --imgwidthmax: 500px;
+          --size-title: 10rem;
+          --font-weight-title: 400;
+          color: var(--color-text);
+          background-color: var(--color-bg);
+          font-family: sans-serif;
+          font-size: 1.5rem;
+          -webkit-font-smoothing: antialiased;
+          -mos-osx-font-smoothing: grayscale;
+        }
+        
+        .fixed {
+          position: fixed;
+        }
+        
+        .demo-1 {
+          --color-text: #111;
+          --color-bg: #bad5ca;
+          --color-link-hover: #5c4541;
+          --aspect-ratio: 32/17;
+          font-size: 1.25rem;
+          --size-title: 15vw;
+        }
+        
+        a {
+          text-decoration: none;
+          color: var(--color-link);
+          outline: none;
+        }
+        a:hover,
+        a:focus {
+          color: var(--color-link-hover);
+          outline: none;
+        }
+        
+        .page {
+          display: grid;
+          padding: 5vw;
+          max-width: 1400px;
+          margin: 0 auto;
+          grid-template-columns: 100%;
+          grid-template-areas: "header" "meta" "grid";
+          will-change: transform;
+        }
+        
+        .page__title {
+          grid-area: header;
+          margin: 0 0 1rem;
+          font-size: inherit;
+        }
+        .credits {
+          text-align: center;
+        }
+        
+        .meta {
+          grid-area: meta;
+        }
+        
+        .meta__links {
+          display: flex;
+          flex-wrap: wrap;
+          line-height: 1.5;
+        }
+        
+        .meta__links a {
+          margin: 0 1.5rem 0 0;
+        }
+        
+        .meta__demos {
+          margin-top: 1rem;
+        }
+        
+        .meta__demo {
+          display: inline-block;
+          margin-right: 0.75rem;
+        }
+        .meta__demo--current {
+          color: var(--color-link-hover);
+          pointer-events: none;
+        }
+        
+        .content {
+          grid-area: grid;
+          margin: 25vh 0 30vh;
+        }
+        
+        .content--full {
+          width: 100vw;
+          justify-self: center;
+        }
+        
+        .content__item {
+          --imgwidth: calc(var(--imgwidthmax) * var(--aspect-ratio));
+          width: var(--imgwidth);
+          max-width: 100%;
+          position: relative;
+          will-change: transform;
+          margin-bottom: 30vh;
+          display: grid;
+          grid-template-columns: 50% 50%;
+        }
+        
+        .content__item--wide {
+          grid-template-columns: 20% 80%;
+        }
+        
+        .content__item--wide:nth-child(even) {
+          grid-template-columns: 80% 20%;
+        }
+        
+        .content--alternate .content__item {
+          margin: 0 auto 15vh;
+        }
+        
+        .content--alternate .content__item:nth-child(even) {
+          margin-left: auto;
+        }
+        
+        .content__item-imgwrap {
+          position: relative;
+          -imgwidth: 100%;
+          margin: 0 auto;
+          grid-area: 1/ 1/3/3;
+          overflow: hidden;
+          width: var(--imgwidth);
+          padding-bottom: calc(var(--imgwidth) / (var(--aspect-ratio)));
+          will-change: transform;
+        }
+        
+        .content__item-img {
+          --overflow: 40px;
+          height: calc(100% + (2 * var(--overflow)));
+          top: calc(-1 * var(--overflow));
+          width: 100%;
+          position: absolute;
+          background-size: cover;
+          background-position: 50% 0;
+          will-change: transform;
+          opacity: 0.8;
+        }
+        
+        .content__item-number {
+          opacity: 0.03;
+          font-size: 25vw;
+          position: absolute;
+          top: -7vw;
+          right: -10vw;
+          line-height: 1;
+        }
+        
+        .content__item:nth-child(even) .content__item-number {
+          right: auto;
+          left: -7vw;
+        }
+        
+        .content__item-title {
+          position: relative;
+          font-size: var(--size-title);
+          padding: 0 3vw;
+          margin: calc(var(--size-title) * -1 / 2) 0 0 0;
+          align-self: start;
+          line-height: 1;
+          font-weight: var(--font-weight-title);
+          color: var(--color-title);
+          will-change: transform;
+        }
+        
+        .content__item-description {
+          grid-area: 3/1/3/3;
+          width: 70%;
+          position: relative;
+          margin: 0;
+          padding: 1rem 0 0 0;
+          color: var(--color-description);
+        }
+        
+        .content--alternate .content__item-title,
+        .content_item--wide:nth-child(even) .content__item-description {
+          grid-area: 3/ 1/ 4/ 2;
+          justify-self: start;
+        }
+        
+        .content--alternate .content__item:nth-child(even) .content__item-title,
+        .content__item--wide .content__item-description {
+          grid-area: 3/2/4/3;
+          justify-self: end;
+          width: auto;
+        }
+        
+        .content__item-deco {
+          position: absolute;
+          top: 2rem;
+          left: 10vw;
+          height: 30%;
+          width: 1px;
+          background: #d79612;
+        }
+        
+        @media screen and (min-width: 53em) {
+          .page--layout-2 {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "header meta" "... meta" "grid grid";
+          }
+        }
+        
     `
     }}
     />     

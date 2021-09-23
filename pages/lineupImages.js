@@ -5,6 +5,7 @@ import Hello from "./Hello";
 //import "./index.css";
  import Image from "next/image";
 
+ /*https://codesandbox.io/s/locomotive-2-do3ls?file=/index.html */
 
 const styles = {
   background: "red",
