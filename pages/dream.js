@@ -8,7 +8,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
  
 
 {/*Reference https://codesandbox.io/s/gsap-animations-8mv7u?file=/src/styles.css */}
- export default function Some() {
+ export default function Dream() {
  
   gsap.registerPlugin(ScrollTrigger);
 

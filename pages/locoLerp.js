@@ -2,7 +2,7 @@
  
 import { useRef, useEffect } from "react";
 import gsap from 'gsap'
-
+ 
 {{ /* REFERENCE: https://codesandbox.io/s/10vn0?file=/styles/styles.css:0-906  
 
   1. Create a constant with a unique name....  
@@ -12,18 +12,24 @@ import gsap from 'gsap'
   5. Scroll destroy it
   5b. Parent div call useRef by name
   6. Export the constant
+  if (typeof window === 'object') {
+  // Check if document is finally loaded
+     document.addEventListener("DOMContentLoaded", function () {
+         alert('Finished loading')
+       });
+    }
 */
 }}
 
 const Snapp = () => {
- 
+
   const scrollRef = useRef();
 
   useEffect(() => {
     if (typeof window === "undefined") {
       return;
-    }
-
+    }  
+ 
     const scroll = import("locomotive-scroll").then((LocomotiveScroll) => {
       new LocomotiveScroll.default({
         el: scrollRef.current,
@@ -43,30 +49,32 @@ const Snapp = () => {
     <section data-scroll-section="">
       <p>Scroll</p>
       <span className="lerp-wrap" data-scroll="">
-        <span data-scroll="" data-scroll-delay="0.18" data-scroll-speed="6">F</span>
-        <span data-scroll="" data-scroll-delay="0.14" data-scroll-speed="6">I</span>
+        <span data-scroll="" data-scroll-delay="0.18" data-scroll-speed="6">P</span>
+        <span data-scroll="" data-scroll-delay="0.14" data-scroll-speed="6">A</span>
         <span data-scroll="" data-scroll-delay="0.12" data-scroll-speed="6">R</span>
-        <span data-scroll="" data-scroll-delay="0.1" data-scroll-speed="6">S</span>
-        <span data-scroll="" data-scroll-delay="0.08" data-scroll-speed="6">T</span>
+        <span data-scroll="" data-scroll-delay="0.10" data-scroll-speed="6">T</span>
+        <span data-scroll="" data-scroll-delay="0.08" data-scroll-speed="6">N</span>
+        <span data-scroll="" data-scroll-delay="0.05" data-scroll-speed="6">E</span>
+        <span data-scroll="" data-scroll-delay="0.03" data-scroll-speed="6">R</span>
       </span>
     </section>
     <section data-scroll-section="">
       <span className="lerp-wrap" data-scroll="">
-        <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.18" data-scroll-speed="6">S</span>
-        <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.14" data-scroll-speed="6">E</span>
-        <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.12" data-scroll-speed="6">C</span>
-        <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.1" data-scroll-speed="6">O</span>
-        <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.08" data-scroll-speed="6">N</span>
-        <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.06" data-scroll-speed="6">D</span>
+        <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.18" data-scroll-speed="6">W</span>
+        <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.14" data-scroll-speed="6">I</span>
+        <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.12" data-scroll-speed="6">T</span>
+        <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.1" data-scroll-speed="6">H -</span>
+        <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.08" data-scroll-speed="6">U</span>
+        <span data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.06" data-scroll-speed="6">S</span>
       </span>
     </section>
     <section data-scroll-section="">
       <span className="lerp-wrap" data-scroll="">
-        <span data-scroll="" data-scroll-delay="0.18" data-scroll-speed="-2">T</span>
+        <span data-scroll="" data-scroll-delay="0.18" data-scroll-speed="-2">C</span>
         <span data-scroll="" data-scroll-delay="0.14" data-scroll-speed="-2">H</span>
-        <span data-scroll="" data-scroll-delay="0.12" data-scroll-speed="-2">I</span>
-        <span data-scroll="" data-scroll-delay="0.1" data-scroll-speed="-2">R</span>
-        <span data-scroll="" data-scroll-delay="0.08" data-scroll-speed="-2">D</span>
+        <span data-scroll="" data-scroll-delay="0.12" data-scroll-speed="-2">A</span>
+        <span data-scroll="" data-scroll-delay="0.1" data-scroll-speed="-2">P</span>
+        <span data-scroll="" data-scroll-delay="0.08" data-scroll-speed="-2">P</span>
       </span>
     </section>
     <section data-scroll-section="">
