@@ -308,6 +308,83 @@ export default function Some() {
 <>
 <main>
       <div data-scroll className="page page--layout-2">
+      <div data-scroll className="page page--layout-2">
+				<h1 className="page__title">Smooth Scrolling Image Effects</h1>
+				<div className="meta">
+					<div className="meta__links">
+						<a href="https://tympanus.net/codrops/?p=42459">Article</a>
+						<a href="https://tympanus.net/Tutorials/SmoothScrollAnimations/">Previous Demo</a>
+						<a href="https://github.com/codrops/SmoothScrollingImageEffects/">GitHub</a>
+					</div>
+					<div className="meta__demos">
+						<a href="index.html" className="meta__demo meta__demo--current">01</a>
+						<a href="index2.html" className="meta__demo">02</a>
+						<a href="index3.html" className="meta__demo">03</a>
+						<a href="index4.html" className="meta__demo">04</a>
+						<a href="index5.html" className="meta__demo">05</a>
+						<a href="index6.html" className="meta__demo">06</a>
+					</div>
+				</div>
+				<div className="content content--full content--alternate">
+					<div className="content__item content__item--wide">
+						<span className="content__item-number">01</span>
+						<div className="content__item-imgwrap"><div className="content__item-img" style={{backgroundImage: " url(img/17.jpg);"}}>    <Image src={require('/assets/beijing.webp')}  alt="image" /></div></div>
+						<div className="content__item-deco"></div>
+						<h2 className="content__item-title">Oh</h2>
+						<p className="content__item-description">Little trees and bushes grow however makes them happy.</p>
+					</div>
+					<div className="content__item content__item--wide">
+						<span className="content__item-number">02</span>
+						<div className="content__item-imgwrap"><div className="content__item-img" style={{backgroundImage: " url(img/21.jpg);"}}>    <Image src={require('/assets/beijing.webp')}  alt="image" /></div></div>
+						<div className="content__item-deco"></div>
+						<h2 className="content__item-title">Ri</h2>
+						<p className="content__item-description">We dont have to be committed. We are just playing here.</p>
+					</div>
+					<div className="content__item content__item--wide">
+						<span className="content__item-number">03</span>
+						<div className="content__item-imgwrap"><div className="content__item-img" style={{backgroundImage: " url(img/19.jpg);"}}>    <Image src={require('/assets/beijing.webp')}  alt="image" /></div></div>
+						<div className="content__item-deco"></div>
+						<h2 className="content__item-title">Nj</h2>
+						<p className="content__item-description">I thought today we would do a happy little picture.</p>
+					</div>
+					<div className="content__item content__item--wide">
+						<span className="content__item-number">04</span>
+						<div className="content__item-imgwrap"><div className="content__item-img" style={{backgroundImage: " url(img/20.jpg);"}}>    <Image src={require('/assets/beijing.webp')}  alt="image" /></div></div>
+						<div className="content__item-deco"></div>
+						<h2 className="content__item-title">Mo</h2>
+						<p className="content__item-description">Nature is so fantastic, enjoy it. Let it make you happy.</p>
+					</div>
+					<div className="content__item content__item--wide">
+						<span className="content__item-number">05</span>
+						<div className="content__item-imgwrap"><div className="content__item-img" style={{backgroundImage: " url(img/18.jpg);"}}>    <Image src={require('/assets/beijing.webp')}  alt="image" /></div></div>
+						<div className="content__item-deco"></div>
+						<h2 className="content__item-title">Ne</h2>
+						<p className="content__item-description">We need a shadow side and a highlight side.</p>
+					</div>
+					<div className="content__item content__item--wide">
+						<span className="content__item-number">06</span>
+						<div className="content__item-imgwrap"><div className="content__item-img" style={{backgroundImage: " url(img/16.jpg);"}}>    <Image src={require('/assets/beijing.webp')}  alt="image" /></div></div>
+						<div className="content__item-deco"></div>
+						<h2 className="content__item-title">Wy</h2>
+						<p className="content__item-description">Well put some happy little leaves here and there.</p>
+					</div>
+					<div className="content__item content__item--wide">
+						<span className="content__item-number">07</span>
+						<div className="content__item-imgwrap"><div className="content__item-img" style={{backgroundImage: " url(img/11.jpg);"}}>    <Image src={require('/assets/beijing.webp')}  alt="image" /></div></div>
+						<div className="content__item-deco"></div>
+						<h2 className="content__item-title">Tx</h2>
+						<p className="content__item-description">With something so strong, a little bit can go a long way.</p>
+					</div>
+					<div className="content__item content__item--wide">
+						<span className="content__item-number">08</span>
+						<div className="content__item-imgwrap"><div className="content__item-img" style={{backgroundImage: " url(img/4.jpg);"}}>    <Image src={require('/assets/beijing.webp')}  alt="image" /></div></div>
+						<div className="content__item-deco"></div>
+						<h2 className="content__item-title">Sd</h2>
+						<p className="content__item-description">There are no limits in this world.</p>
+					</div>
+					<p className="credits">Photography by <a href="https://www.instagram.com/byfoul/">Frankie Cordoba</a></p>
+				</div>
+			</div>
    {/*     <h1 className="page__title fixed">Smooth Scrolling Image Effects</h1>
         <div className="meta">
           <div className="mata__link">
@@ -330,7 +407,11 @@ export default function Some() {
               <div
                 className="content__item-img"
                 style={{backgroundImage:"url(/assets/beijing.webp)"}}
-              > <Image src={require('/assets/beijing.webp')}  alt="image" /></div>
+              > 
+              
+              <Image src={require('/assets/beijing.webp')}  alt="image" />
+              
+              </div>
             </div>
        
             <div className="content__item-deco"></div>
@@ -346,6 +427,83 @@ export default function Some() {
             */} 
         </div>
       </div>
+      <div data-scroll className="page page--layout-2">
+				<h1 className="page__title">Smooth Scrolling Image Effects</h1>
+				<div className="meta">
+					<div className="meta__links">
+						<a href="https://tympanus.net/codrops/?p=42459">Article</a>
+						<a href="https://tympanus.net/Tutorials/SmoothScrollAnimations/">Previous Demo</a>
+						<a href="https://github.com/codrops/SmoothScrollingImageEffects/">GitHub</a>
+					</div>
+					<div className="meta__demos">
+						<a href="index.html" className="meta__demo meta__demo--current">01</a>
+						<a href="index2.html" className="meta__demo">02</a>
+						<a href="index3.html" className="meta__demo">03</a>
+						<a href="index4.html" className="meta__demo">04</a>
+						<a href="index5.html" className="meta__demo">05</a>
+						<a href="index6.html" className="meta__demo">06</a>
+					</div>
+				</div>
+				<div className="content content--full content--alternate">
+					<div className="content__item content__item--wide">
+						<span className="content__item-number">01</span>
+						<div className="content__item-imgwrap"><div className="content__item-img" style={{backgroundImage: " url(img/17.jpg);"}}></div></div>
+						<div className="content__item-deco"></div>
+						<h2 className="content__item-title">Oh</h2>
+						<p className="content__item-description">Little trees and bushes grow however makes them happy.</p>
+					</div>
+					<div className="content__item content__item--wide">
+						<span className="content__item-number">02</span>
+						<div className="content__item-imgwrap"><div className="content__item-img" style={{backgroundImage: " url(img/21.jpg);"}}></div></div>
+						<div className="content__item-deco"></div>
+						<h2 className="content__item-title">Ri</h2>
+						<p className="content__item-description">We don't have to be committed. We are just playing here.</p>
+					</div>
+					<div className="content__item content__item--wide">
+						<span className="content__item-number">03</span>
+						<div className="content__item-imgwrap"><div className="content__item-img" style={{backgroundImage: " url(img/19.jpg);"}}></div></div>
+						<div className="content__item-deco"></div>
+						<h2 className="content__item-title">Nj</h2>
+						<p className="content__item-description">I thought today we would do a happy little picture.</p>
+					</div>
+					<div className="content__item content__item--wide">
+						<span className="content__item-number">04</span>
+						<div className="content__item-imgwrap"><div className="content__item-img" style={{backgroundImage: " url(img/20.jpg);"}}></div></div>
+						<div className="content__item-deco"></div>
+						<h2 className="content__item-title">Mo</h2>
+						<p className="content__item-description">Nature is so fantastic, enjoy it. Let it make you happy.</p>
+					</div>
+					<div className="content__item content__item--wide">
+						<span className="content__item-number">05</span>
+						<div className="content__item-imgwrap"><div className="content__item-img" style={{backgroundImage: " url(img/18.jpg);"}}></div></div>
+						<div className="content__item-deco"></div>
+						<h2 className="content__item-title">Ne</h2>
+						<p className="content__item-description">We need a shadow side and a highlight side.</p>
+					</div>
+					<div className="content__item content__item--wide">
+						<span className="content__item-number">06</span>
+						<div className="content__item-imgwrap"><div className="content__item-img" style={{backgroundImage: " url(img/16.jpg);"}}></div></div>
+						<div className="content__item-deco"></div>
+						<h2 className="content__item-title">Wy</h2>
+						<p className="content__item-description">Well put some happy little leaves here and there.</p>
+					</div>
+					<div className="content__item content__item--wide">
+						<span className="content__item-number">07</span>
+						<div className="content__item-imgwrap"><div className="content__item-img" style={{backgroundImage: " url(img/11.jpg);"}}></div></div>
+						<div className="content__item-deco"></div>
+						<h2 className="content__item-title">Tx</h2>
+						<p className="content__item-description">With something so strong, a little bit can go a long way.</p>
+					</div>
+					<div className="content__item content__item--wide">
+						<span className="content__item-number">08</span>
+						<div className="content__item-imgwrap"><div className="content__item-img" style={{backgroundImage: " url(img/4.jpg);"}}></div></div>
+						<div className="content__item-deco"></div>
+						<h2 className="content__item-title">Sd</h2>
+						<p className="content__item-description">There are no limits in this world.</p>
+					</div>
+					<p className="credits">Photography by <a href="https://www.instagram.com/byfoul/">Frankie Cordoba</a></p>
+				</div>
+			</div>
     </main>
 
 

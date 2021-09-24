@@ -5,7 +5,7 @@ import gsap from 'gsap'
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
  import { styles } from '@/components/styles.module.scss'
 
-{{ /* REFERENCE: https://codesandbox.io/s/10vn0?file=/styles/styles.css:0-906  
+{{ /* REFERENCE: https://codesandbox.io/s/portfolio-takosu-0ylz9?file=/src/scss/index.scss:0-2137 
 
   1. Create a constant with a unique name....  
   2. Create a constant name for a useRef 
@@ -125,6 +125,7 @@ ScrollTrigger.refresh();
           </div>
         </div>
       </section>
+      
     </main>
       <style
       dangerouslySetInnerHTML={{
@@ -203,7 +204,7 @@ ScrollTrigger.refresh();
             box-sizing: border-box;
             overflow: hidden;
             width: 100vw;
-            background-color: #303030;
+            background-color: #06092d;
          }
          footer {
            height: 0;
